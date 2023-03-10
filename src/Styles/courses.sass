@@ -1,0 +1,229 @@
+@import 'theme.scss'
+
+.course-background
+    @include themify($themes)
+      background: themed('course-background')
+
+.course-series-title
+    font-size: 1.3em
+    font-weight: 500
+    margin-top: 40px
+    margin-bottom: 20px
+
+    @include themify($themes)
+      color: themed('text-color')
+
+.courses-block
+    margin: 6px
+    padding: 15px
+    height: 250px
+
+    h2
+        font-weight: 500
+        font-size: 20px
+        line-height: 1em
+        text-align: left
+
+    img
+        display: block
+        margin-left: auto
+        margin-right: auto
+        max-height: 150px
+        max-width: 80%
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+
+    a:hover
+        color: inherit
+
+    .centered-img
+        height: 90%
+        position: relative
+
+    .course-nb
+        border-radius: 100%
+        height: 25px
+        width: 25px
+        border-radius: 50%
+        display: inline-block
+        text-align: center
+        margin-right: 8px
+        font-size: 80%
+
+        @include themify($themes)
+            border: 2px solid  themed('accent-color')
+            color: themed('accent-color')
+
+    .empty-course
+        width: 100%
+        height: 250px
+
+.course-container
+    padding-top: 80px
+    text-align: justify
+
+    @include themify($themes)
+      color: themed('text-color')
+
+    h1
+        font-weight: bold
+        font-family: Playfair Display,serif
+        font-weight: 700
+        font-size: 3em
+        line-height: 1em
+        margin: 0 0 30px
+        text-align: left
+
+    a
+        @include themify($themes)
+            color: themed('accent-color')
+
+    blockquote
+        font-style: normal
+        font-size: 16px
+        margin-left: 32px
+        padding-left: 8px
+        padding-top: 10px
+        padding-bottom: 10px
+        
+        @include themify($themes)
+            border-left: 4px solid themed('text-color-secondary')
+
+    ul li::before
+        content: "\2022"  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        font-weight: bold /* If you want it to be bold */
+        display: inline-block /* Needed to add space between the bullet and the text */
+        width: 1em /* Also needed for space (tweak if needed) */
+        margin-left: -1em /* Also needed for space (tweak if needed) */
+
+        @include themify($themes)
+            color: themed('text-color')
+
+    .subtitle
+        margin-bottom: 50px
+
+        @include themify($themes)
+            color: themed('text-color-secondary')
+
+    .header-img
+        max-height: 350px
+        max-width: 100%
+        display: block
+        margin-left: auto
+        margin-right: auto
+        // filter: grayscale(50%)
+        transition: 300ms
+
+        // &:hover
+        //     filter: grayscale(0%)
+
+    .test
+        width: 300px
+
+    .date
+        @include themify($themes)
+            color: themed('text-color-secondary')
+
+        font-size: 90%
+
+    .course-img
+        display: block
+        margin-left: auto
+        margin-right: auto
+        max-height: 350px
+        max-width: 100%
+
+    .caption
+        display: block
+        text-align: center
+        margin-top: -10px
+        margin-bottom: 20px
+        font-size: 85%
+
+    .course-buttons
+        width: 100%
+        display: inline-block
+        margin-bottom: 20px
+
+        svg
+            @include themify($themes)
+                color: themed('accent-color')
+
+        a
+            @include themify($themes)
+                color: themed('text-color')
+
+    .link-quote
+        @include themify($themes)
+            background: themed('background-secondary')
+        
+        padding: 5px
+        border-radius: 6px
+
+        a
+            @include themify($themes)
+                color: themed('text-color')
+
+    .counter
+        text-align: right
+        width: 100%
+        height: 30px
+        font-size: 80%
+
+
+// _____ Code blocks style _____
+
+.hljs
+    @include themify($themes)
+      color: themed('text-color')
+
+.hljs-comment,
+.hljs-quote
+  @include themify($themes)
+    color: themed('code-block-comment')
+  font-style: italic
+
+.hljs-built_in
+    @include themify($themes)
+        color: themed('code-block-builtin')
+
+.hljs-number
+    @include themify($themes)
+        color: themed('code-block-comment')
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula
+    color: #c678dd
+
+.code-style
+    padding-left: 2em
+    padding-bottom: 1em
+    border-radius: 5px
+
+    @include themify($themes)
+        border: 0.1px solid themed('text-color-secondary')
+
+    @include themify($themes)
+      background: themed('code-block-background')
+
+    *
+        font-family: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace !important
+
+// _____ Equations style _____
+
+.katex .katex-html *
+    font-family: "DM Serif Display", serif
+
+
+@media (max-width: 800px)  
+    .header-img
+        width: 70%
+        
+    .course-container
+        h1
+            font-size: 2.3em

@@ -1,0 +1,61 @@
+@import 'theme.scss';
+
+$primary: #22D2A0;
+$secondary: #192824;
+$green: #1FC11B;
+$yellow: #FFD913;
+$orange: #FF9C55;
+$red: #FF5555;
+
+.footer-msg {
+    @include themify($themes) {
+        color: themed('text-color');
+    font-size: 1rem;
+    }
+}
+
+.footer-card {
+    @include themify($themes) {
+        background-color: themed('background');
+        display: flex;
+        width: 80%;
+        min-height: 90px;
+        border: 3px solid $primary;
+        padding: 15px;
+        margin: auto;
+        box-shadow: 10px -10px 0 -3px themed('background'), 10px -10px $green,
+            20px -20px 0 -3px themed('background'), 20px -20px $yellow, 
+            30px -30px 0 -3px themed('background'), 30px -30px $orange, 
+            40px -40px 0 -3px themed('background'), 40px -40px $red; 
+        transition: box-shadow 1s, top 1s, left 1s;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+  }
+  
+  .footer-card:hover {
+    top: -40px;
+    left: 40px;
+    @include themify($themes) {
+        box-shadow: 0 0 0 -3px themed('background'), 0 0 0 0 $green,
+            0 0 0 -3px themed('background'), 0 0 0 0  $yellow,
+            0 0 0 -3px themed('background'), 0 0 0 0  $orange,
+            0 0 0 -3px  themed('background'), 0 0 0 0  $red;
+    }
+  }
+  
+  .footer-card h2 {
+    font-size: 14px;
+    margin: auto;
+  }
+
+  @media (max-width: 800px) {
+    .footer-card {
+       width: 70% !important;
+       margin: inherit !important;
+       margin-left: 12% !important;
+    //    margin-right: 60px !important;
+    }
+  }
+  
