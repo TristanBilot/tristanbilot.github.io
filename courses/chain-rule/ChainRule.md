@@ -125,7 +125,7 @@ $$
 ## Implementation in Python
 
 In this section, we will implement a very basic derivative engine which can apply the chain rule on composite functions and return the derivative expression or inference as plain text w.r.t one variable.
-A real automatic differentiation engine will be implemented in <a href="/autodiff">the next course</a> but the aim of this one is to better understand chain rule by implementing it.
+A real automatic differentiation engine will be implemented in the next course but the aim of this one is to better understand chain rule by implementing it.
 
 First, let's define the needed classes:
 
@@ -352,4 +352,4 @@ assert round(diff.differentiate(x=5), 2) == 423175.18
 
 ## Next steps
 
-In the <a href="/autodiff">next course</a>, a real `AutoDiff` engine will be implemented with `backpropagation` and operator overloading.
+In the next course, a real `AutoDiff` engine will be implemented with `backpropagation` and operator overloading.
