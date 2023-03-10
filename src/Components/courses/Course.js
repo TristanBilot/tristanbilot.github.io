@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Markdown from './MarkDown'
 import '../../Styles/courses.sass';
 
@@ -50,13 +51,13 @@ const Course = (props) => {
         btns.push(
           <div className='float-start'>
             <i class="fas fa-chevron-left"></i>
-            <a class="ms-1" href={props.prev_course["url"]}>{props.prev_course["name"]}</a>
+            <Link to={props.prev_course["url"]} class="ms-1" target="_blank" rel="noopener noreferrer">{props.prev_course["name"]}</Link>
           </div>
         )
       if (props.next_course["course_path"] != "")
         btns.push(
           <div className='float-end'>
-            <a href={props.next_course["url"]}>{props.next_course["name"]}</a>
+          <Link to={props.next_course["url"]} target="_blank" rel="noopener noreferrer">{props.next_course["name"]}</Link>
             <i class="fas fa-chevron-right ms-1"></i>
           </div>
         )
