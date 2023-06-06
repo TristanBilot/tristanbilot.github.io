@@ -6,11 +6,11 @@
 
 <span class="link-quote"><a href="https://github.com/TristanBilot/DL-from-0" target="_blank" rel="noopener noreferrer">The code is available on <i class="fab fa-github"></i> GitHub</a></span>
 
-In the <a href="/chain-rule"> previous course</a>, we understood how derivatives of composite functions can be computed using chain rule and computation graphs.
+In the previous course, we understood how derivatives of composite functions can be computed using chain rule and computation graphs.
 
 In this course, we will develop a reliable <a href="https://en.wikipedia.org/wiki/Automatic_differentiation">autodiff</a> engine to compute the gradients of composite functions combined with arithmetic operations. We will also build our first `neural network` and compare the derivatives with the ones computed by `pytorch` framework.
 
-I **really** encourage you to read the **<a href="/prerequisites">Prerequisites course</a>** before diving into this one as the concepts of gradients, partial derivatives, autodiff and backprop are explained there.
+I **really** encourage you to read the **Prerequisites course** before diving into this one as the concepts of gradients, partial derivatives, autodiff and backprop are explained there.
 
 ## Theory
 
@@ -75,7 +75,7 @@ As said a thousand times in this series, **a neural net is a long composition of
 
 To perform AD, we need to divide the problem in multiple simple operations (i.e. divide and conquer scheme). Computing the partial derivative of a function w.r.t a variable becomes really easy once the composition of functions is divided in multiple simple usual derivatives.
 
-In practice, the composition of functions is decomposed using a `computation graph`, which is explained in the <a href="/chain-rule">previous course</a>.
+In practice, the composition of functions is decomposed using a `computation graph`, which is explained in the previous course.
 Each node in this graph could be a usual derivative or a mathematical operation such as `add`, `mul` of `matrix multiplication`.
 
 #### Example
@@ -459,6 +459,6 @@ assert np.all(np.round(W1.gradient, 4) == np.round(dw1, 4))
 
 ## Next steps
 
-In the <a href="/optimize">next course</a>, we will use our autodiff engine to optimize a first neural net using `stochastic gradient descent` and `MSE` cost function. 
+In the next course, we will use our autodiff engine to optimize a first neural net using `stochastic gradient descent` and `MSE` cost function. 
 
 <!-- penser à optimiser les opérations en stockant les gradients précédents -->

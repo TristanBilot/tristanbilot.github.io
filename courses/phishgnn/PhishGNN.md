@@ -168,8 +168,8 @@ The original PhishGNN-22 dataset is **only** available under Pytorch Geometric (
 
 <a href="/courses/phishgnn/phishgnn-22.zip"> <i class="fa fa-download" aria-hidden="true"></i> Download file (.zip)</a> ~40MB
 
-**Another dataset with more benign examples is available in CSV format:**
+<!-- **Another dataset with more benign examples is available in CSV format:**
 
 13,509 graphs (2333 phishing, 11176 benign)
 
-<a href="/courses/phishgnn/2333_phishing_11176_benign_crawled.csv" download="2333_phishing_11176_benign_crawled.csv"> <i class="fa fa-download" aria-hidden="true"></i> Download file (.csv)</a> ~400MB
+<a href="/courses/phishgnn/2333_phishing_11176_benign_crawled.csv" download="2333_phishing_11176_benign_crawled.csv"> <i class="fa fa-download" aria-hidden="true"></i> Download file (.csv)</a> ~400MB -->
