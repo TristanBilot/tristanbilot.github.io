@@ -6,7 +6,7 @@
 
 <span class="link-quote"><a href="https://github.com/TristanBilot/DL-from-0" target="_blank" rel="noopener noreferrer">The code is available on <i class="fab fa-github"></i> GitHub</a></span>
 
-In the <a href="/optimization"> previous course</a>, we developed a MLP model architecture along with momentum SGD and Adam optimizers.
+In the previous course, we developed a MLP model architecture along with momentum SGD and Adam optimizers.
 
 In the following course, we will test our model by trying to approximate two famous functions: `XOR` and `sine`.
 

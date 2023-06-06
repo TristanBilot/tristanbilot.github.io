@@ -11,8 +11,8 @@ class Header extends Component {
 
         <div className="container-fluid position-relative header-global">
           <div className="row align-items-center full-height">
-            <div className="col-lg-2 col-1 col-lg-"></div>
-            <div className="col-lg-8 col-10">
+            <div className="col-sm-2 col-1"></div>
+            <div className="col-sm-8 col-10">
 
               <div class="row" itemProp="author" itemScope="" itemType="http://schema.org/Person" itemRef="person-email">
                 <div class="col-xs-12 col-md-4">
@@ -28,7 +28,7 @@ class Header extends Component {
 
                     <ul class="network-icon" aria-hidden="true">
                       <li>
-                        <a itemProp="sameAs" href="mailto:tristan.bilot@universite-paris-saclay.fr" target="_blank" rel="noopener">
+                        <a itemProp="sameAs" href="mailto:tristan.bilot@epita.fr" target="_blank" rel="noopener">
                           <i class="fa fa-envelope big-icon"></i>
                         </a>
                       </li>
@@ -149,7 +149,7 @@ class Header extends Component {
               </div>
 
             </div>
-            <div className="col-lg-2 col-1"></div>
+            <div className="col-sm-2 col-1"></div>
           </div>
         </div>
         <div class="background">

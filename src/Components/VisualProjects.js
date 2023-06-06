@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/projects.scss';
 import '../Styles/visualProjects.sass';
 import tsp from '../resources/tsp.png';
@@ -34,7 +35,7 @@ class VisualProjects extends Component {
                         </div>
                         <div class="project-card__info">
                         <img className="visual-project-card__img" src={tsp} alt="TSP image."></img>
-                            <a href="/genetic-tsp" target="_blank" rel="noopener noreferrer" class="project-card__btn">Visualize  <i class="fas fa-chevron-right"></i></a>
+                            <Link to={`/genetic-tsp`} target="_blank" rel="noopener noreferrer" class="project-card__btn">Visualize  <i class="fas fa-chevron-right"></i></Link>
                         </div>
                     </div>
 
@@ -47,7 +48,7 @@ class VisualProjects extends Component {
                         </div>
                         <div class="project-card__info">
                         <img className="visual-project-card__img" src={knapsack} alt="Knapsack image."></img>
-                            <a href="/genetic-knapsack" target="_blank" rel="noopener noreferrer" class="project-card__btn">Visualize  <i class="fas fa-chevron-right"></i></a>
+                            <Link to={`/genetic-knapsack`} target="_blank" rel="noopener noreferrer" class="project-card__btn">Visualize  <i class="fas fa-chevron-right"></i></Link>
                         </div>
                     </div>
 

@@ -35,11 +35,6 @@ class Interests extends Component {
                   <span>Articles</span>
                 </a>
               </li>
-              <li class="background nav-item">
-                <a class="nav-link" href="/#background">
-                  <span>Background</span>
-                </a>
-              </li>
               <li class="projects nav-item">
                 <a class="nav-link" href="/#projects">
                   <span>Projects</span>
@@ -48,6 +43,11 @@ class Interests extends Component {
               <li class="visual-projects nav-item">
                 <a class="nav-link" href="/#visual-projects">
                   <span>Visual Projects</span>
+                </a>
+              </li>
+              <li class="background nav-item">
+                <a class="nav-link" href="/#background">
+                  <span>Background</span>
                 </a>
               </li>
             </ul>

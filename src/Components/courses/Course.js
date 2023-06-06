@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Markdown from './MarkDown'
 import '../../Styles/courses.sass';
 
@@ -35,7 +36,6 @@ const Course = (props) => {
         .then((res) => res.json())
         .then((text) => {
           counter = text["value"]
-          console.log(counter)
           setContent(text)
         });
     }
@@ -46,21 +46,18 @@ const Course = (props) => {
     }, []);
 
     function buttons() {
-      if (!("prev_course" in props && "next_course" in props))
-        return
-        
       let btns = []
       if (props.prev_course["course_path"] != "")
         btns.push(
           <div className='float-start'>
             <i class="fas fa-chevron-left"></i>
-            <a class="ms-1" href={props.prev_course["url"]}>{props.prev_course["name"]}</a>
+            <Link to={props.prev_course["url"]} class="ms-1" target="_blank" rel="noopener noreferrer">{props.prev_course["name"]}</Link>
           </div>
         )
       if (props.next_course["course_path"] != "")
         btns.push(
           <div className='float-end'>
-            <a href={props.next_course["url"]}>{props.next_course["name"]}</a>
+          <Link to={props.next_course["url"]} target="_blank" rel="noopener noreferrer">{props.next_course["name"]}</Link>
             <i class="fas fa-chevron-right ms-1"></i>
           </div>
         )
@@ -83,7 +80,7 @@ const Course = (props) => {
               <div class="course-buttons">
                 {buttons()}
               </div>
-              {/* {viewCounts()} */}
+              {viewCounts()}
               <Markdown content={markdown} />
               {/* <div class="course-buttons mt-4 mb-5">
                 {buttons()}

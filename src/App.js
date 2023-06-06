@@ -17,10 +17,16 @@ import Courses from './Components/Courses'
 import Course from './Components/courses/Course'
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
+  HashRouter as Router
 } from "react-router-dom";
+
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+// } from "react-router-dom";
 
 import './App.css';
 import '@fortawesome/fontawesome-free/js/brands'
@@ -96,13 +102,6 @@ function App() {
           </Route>
 
           {CourseRoutes()}
-
-          <Route path="/phishGNN">
-            <NavBar />
-            <Course 
-              course_path="courses/phishgnn/PhishGNN.md"
-            />
-          </Route>
 
           <Route path='/'>
             <NavBar />
