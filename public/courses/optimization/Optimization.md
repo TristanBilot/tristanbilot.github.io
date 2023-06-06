@@ -6,13 +6,13 @@
 
 <span class="link-quote"><a href="https://github.com/TristanBilot/DL-from-0" target="_blank" rel="noopener noreferrer">The code is available on <i class="fab fa-github"></i> GitHub</a></span>
 
-In the  previous course, we developed an automatic differentiation engine which can compute inference of composition of functions along with the gradients w.r.t any parameters.
+In the <a href="/autodiff"> previous course</a>, we developed an automatic differentiation engine which can compute inference of composition of functions along with the gradients w.r.t any parameters.
 
 We are now interested in training our first neural net by implementing optimizers and cost functions.
 
 ## Theory
 
-As explained in the Prerequisites course, the aim of a cost function (or loss function) is to return a value representing the error of a network. By computing the gradients of this function w.r.t all the parameters involved in the output of the neural net (commonly the weights and biases), we know in which direction to go in order to minimize the output of the cost function. Minimizing this output will thus minimize the error of the model and mostly improve the prediction accury. The gradient contains for each corresponding parameter a real number where the sign indicates the direction where the function increases or decreases most quickly, and where the actual number indicates how much the parameter has to be changed in order to minimize the error.
+As explained in the <a href="/prerequisites"> Prerequisites course</a>, the aim of a cost function (or loss function) is to return a value representing the error of a network. By computing the gradients of this function w.r.t all the parameters involved in the output of the neural net (commonly the weights and biases), we know in which direction to go in order to minimize the output of the cost function. Minimizing this output will thus minimize the error of the model and mostly improve the prediction accury. The gradient contains for each corresponding parameter a real number where the sign indicates the direction where the function increases or decreases most quickly, and where the actual number indicates how much the parameter has to be changed in order to minimize the error.
 
 When the gradient is > 0, it indicates the direction where the function increases quickly and where it is < 0, the direction of fastest decreasing. A large value of the gradient means a large rate of change. A gradient with a value of 0 means that a local/global minimum/maximum has been reached, as the tangent will be horizontal (coefficient=0).
 
@@ -364,4 +364,4 @@ A `MLP` is initialized by giving as input a stack of layers to traverse to perfo
 The `params` property returns the `Parameters` of each layer. These parameters will then be given as input to the `Optimizer`.
 ## Next steps
 
-In the next course, the MLP model based on the autodiff engine, along with the optimizers will be tested and improved against 2 traditional Machine Learning problems: approximating the XOR and sine functions.
+In the <a href="/xor-sine">next course</a>, the MLP model based on the autodiff engine, along with the optimizers will be tested and improved against 2 traditional Machine Learning problems: approximating the XOR and sine functions.
