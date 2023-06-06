@@ -1,0 +1,82 @@
+/*
+ * Implementation of themes
+ */
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+$switch-transition-delay: 1.5s;
+
+$background: #2A2730;//#1D1D1D ;
+$background-secondary: #57545E; //#2C2C2C;
+$text-color: #fff;
+$text-color-secondary: #ccc;
+$accent-color: #FFB2FD;
+$code-block-background: #f6f8fa;
+
+$orange: #F69488;
+$blue-light: #91CBD7;
+$blue: #4E9BB9;
+$yellow: #FFD086;
+$red: #ED6570;
+
+$themes: (
+  dark: (
+    background: #2A2730,
+    background-secondary: #57545E,
+    text-color: #fff,
+    text-color-secondary: #ccc,
+    accent-color: #FFB2FD,
+    course-background: $background,
+    code-block-background: $background-secondary,
+    code-block-builtin: #03DAC6,
+    code-block-comment: #ccc,
+  ),
+  light: (
+    background: #f6f9fc,
+    background-secondary: #eee,
+    text-color: #2A2730,
+    text-color-secondary: #888,
+    accent-color: #B8A9FF,
+    course-background: #fff,
+    code-block-background: #f6f8fa,
+    code-block-builtin: #6200EE,
+    code-block-comment: #888,
+  ),
+);
+
+* {
+    transition: color $switch-transition-delay ease-in-out; // smooth theme change
+    transition: background $switch-transition-delay ease-in-out;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+  @include themify($themes) {
+    color: themed('accent-color');
+  }
+}
+ul {
+   list-style: none;
+}
+h2 {
+  font-weight: 400;
+}

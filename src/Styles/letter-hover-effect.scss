@@ -1,0 +1,130 @@
+// @import 'theme.scss';
+
+// .animate-letter{
+//   position: relative;
+//   @include themify($themes) {
+//     color: themed('background-secondary')
+//   }
+//   transform-style: preserve-3d;
+//   perspective: 400;
+//   z-index: 1;
+// }
+
+// .animate-letter:before, .animate-letter:after {
+//   position:absolute;
+//   content:attr(data-letter);
+//   transform-origin: top left;
+//   top: 0;
+//   left: 0;
+// }
+
+// .animate-letter, .animate-letter:before, .animate-letter:after {
+//   transition: all 0.3s ease-out;
+// }
+
+// .animate-letter:before{
+//     @include themify($themes) {
+//         color: themed('text-color')
+//     }
+//   text-shadow: 
+//     -1px 0px 1px rgba(255,255,255,0.5),
+//     1px 0px 1px rgba(0,0,0,0.5);
+//   z-index: 3;
+//   transform:
+//     rotateX(0deg)
+//     rotateY(-15deg)
+//     rotateZ(0deg);
+// }
+// .animate-letter:after{
+//   color: rgba(0,0,0,.11);
+//   z-index:2;
+//   transform:
+//     scale(1.08,1)
+//     rotateX(0deg)
+//     rotateY(0deg)
+//     rotateZ(0deg)
+//     skew(0deg,1deg);
+// }
+// .animate-letter:hover:before{
+//     @include themify($themes) {
+//         color: themed('text-color')
+//     }
+//     transform:
+//         rotateX(0deg)
+//         rotateY(-40deg)
+//         rotateZ(0deg);
+// }
+// .animate-letter:hover:after{
+//   transform:
+//     scale(1.08,1)
+//     rotateX(0deg)
+//     rotateY(40deg)
+//     rotateZ(0deg)
+//     skew(0deg,22deg);
+// }
+
+// // Accent color version
+
+
+// .animate-letter-accent{
+//   position: relative;
+//   @include themify($themes) {
+//     color: themed('background-secondary')
+//   }
+//   transform-style: preserve-3d;
+//   perspective: 400;
+//   z-index: 1;
+// }
+
+// .animate-letter-accent:before, .animate-letter-accent:after {
+//   position:absolute;
+//   content:attr(data-letter);
+//   transform-origin: top left;
+//   top: 0;
+//   left: 0;
+// }
+
+// .animate-letter-accent, .animate-letter-accent:before, .animate-letter-accent:after {
+//   transition: all 0.2s ease-out;
+// }
+
+// .animate-letter-accent:before{
+//     @include themify($themes) {
+//         color: themed('accent-color')
+//     }
+//   text-shadow: 
+//     -1px 0px 1px rgba(255,255,255,0.5),
+//     1px 0px 1px rgba(0,0,0,0.5);
+//   z-index: 3;
+//   transform:
+//     rotateX(0deg)
+//     rotateY(-15deg)
+//     rotateZ(0deg);
+// }
+// .animate-letter-accent:after{
+//   color: rgba(0,0,0,.11);
+//   z-index:2;
+//   transform:
+//     scale(1.08,1)
+//     rotateX(0deg)
+//     rotateY(0deg)
+//     rotateZ(0deg)
+//     skew(0deg,1deg);
+// }
+// .animate-letter-accent:hover:before{
+//     @include themify($themes) {
+//         color: themed('accent-color')
+//     }
+//     transform:
+//         rotateX(0deg)
+//         rotateY(-40deg)
+//         rotateZ(0deg);
+// }
+// .animate-letter-accent:hover:after{
+//   transform:
+//     scale(1.08,1)
+//     rotateX(0deg)
+//     rotateY(40deg)
+//     rotateZ(0deg)
+//     skew(0deg,22deg);
+// }
