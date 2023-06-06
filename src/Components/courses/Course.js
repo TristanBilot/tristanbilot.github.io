@@ -46,6 +46,9 @@ const Course = (props) => {
     }, []);
 
     function buttons() {
+      if (!("prev_course" in props && "next_course" in props))
+        return
+        
       let btns = []
       if (props.prev_course["course_path"] != "")
         btns.push(

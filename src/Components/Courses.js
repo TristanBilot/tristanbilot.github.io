@@ -77,12 +77,32 @@ class Courses extends Component {
                                 <h2><span class="course-nb">4</span>XOR and sine problems</h2>
                                 <div class="centered-img">
                                     <img src="/courses/xor-sine/img/g1.jpg"/>
-                                </div>
+                                    </div>
                             </Link>
                             </div>
                         </div>
                     </div>
 
+                </div>
+
+                <div className="container-fluid position-relative">
+                    <div class="animatable fadeInUp">
+                        <h3 class="course-series-title">Paper resources</h3>
+                        <hr/>
+                    </div>
+
+                    <div className="row animatable fadeInUp">
+                        <div class="col-md-6">
+                            <div class="courses-block accent-box">
+                                <Link to={`/phishgnn`} target="_blank" rel="noopener noreferrer">
+                                    <h2><span class="course-nb">0</span> PhishGNN-22 dataset</h2>
+                                    <div class="centered-img">
+                                        <img src="/courses/phishgnn/img/main.png"></img>    
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="col-sm-2 col-1"></div>

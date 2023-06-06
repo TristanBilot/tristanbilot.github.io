@@ -101,6 +101,13 @@ function App() {
             <KnapsackScript />
           </Route>
 
+          <Route path="/phishGNN">
+            <NavBar />
+            <Course 
+              course_path="courses/phishgnn/PhishGNN.md"
+            />
+          </Route>
+
           {CourseRoutes()}
 
           <Route path='/'>
