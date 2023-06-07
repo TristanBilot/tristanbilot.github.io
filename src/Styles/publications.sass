@@ -6,12 +6,16 @@
     &__image
         margin-top: 10px
         width: 70%
+        max-width: 650px
 
     a
         margin-right: 10px
         text-decoration: underline
         @include themify($themes)
             text-decoration-color: themed('accent-color')
+
+    h3 a
+        text-decoration: none
 
 @media (max-width: 800px)
     .publication-card
