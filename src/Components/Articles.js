@@ -12,9 +12,9 @@ class Articles extends Component {
             <div className="col-sm-8 col-10">
               <div className="vertical-space"></div>
               <div className="block">
-                <h1 className="title animate-letters-accent animatable fadeInUp">Engineering articles</h1>
+                <h1 className="title animate-letters-accent animatable fadeInUp">Medium articles</h1>
                 <blockquote class="blockquote">
-                  <p className='span-title-comment'>I used to write <span className='accent-color'> Medium articles</span> on Software/Mobile Development and Data Engineering topics in order to <span className='accent-color'>help the community</span> on issues I encountered over the last years.</p>
+                  <p className='span-title-comment'>I use to write <span className='accent-color'> Medium articles</span> on various engineering/programming topics, to <span className='accent-color'>help the community</span> on issues I encountered over the last years.</p>
                 </blockquote>
                 <div className="small-vertical-space"></div>
 

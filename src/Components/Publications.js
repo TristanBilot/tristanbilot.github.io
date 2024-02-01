@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import kernel from '../resources/publications/phishgnn_figure.png';
 import intrusion_survey from '../resources/publications/intrusion_survey_figure.png';
 import malware_survey from '../resources/publications/malware_survey_figure.png';
+import csnet from '../resources/publications/csnet.png';
 import '../Styles/publications.sass';
 
 class Publications extends Component {
@@ -17,12 +18,31 @@ class Publications extends Component {
                     <div className="vertical-space-only-mobile"></div>
                     <h1 className="title  fadeInUp">Publications</h1>
                     <blockquote class="blockquote">
-                        <p className='span-title-comment'>My <i>beginning</i> <span className='accent-color'>research work</span>.</p>
+                        <p className='span-title-comment'>Publications related to my <span className='accent-color'>research work</span>.</p>
                     </blockquote>
                     <div className="small-vertical-space"></div>
                     <div className="row animatable fadeInUp">
                         <div className="col-md-12">
 
+                        <div class="publication-card animatable fadeInUp accent-box">
+                              <div class="">
+                                  <h6>CSNet 2023 - Montréal</h6>
+                                  <h3>
+                                    <a href='https://hal.science/hal-04186579/document' target="_blank" rel="noopener">
+                                    A Benchmark of Graph Augmentations for Contrastive Learning-Based Network Attack Detection with Graph Neural Networks
+                                    </a>
+                                  </h3>
+                                  <span className=""><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</span>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-center">
+                                  <img className="publication-card__image" src={csnet} alt="Benchmark contrastive learning"></img>
+                              </div>
+                              <div>
+                                  <a href='https://hal.science/hal-04186579/document' target="_blank" rel="noopener">Paper</a> 
+                              </div>
+                          </div>
+                          <div className="small-vertical-space"></div>
+                        
                         <div class="publication-card animatable fadeInUp accent-box">
                               <div class="">
                                   <h6>IEEE Access Journal</h6>

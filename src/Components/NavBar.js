@@ -27,7 +27,7 @@ class Interests extends Component {
               </li>
               <li class="courses nav-item">
                 <a class="nav-link" href="/#courses">
-                  <span>Courses</span>
+                  <span>Posts</span>
                 </a>
               </li>
               <li class="articles nav-item">
@@ -35,21 +35,21 @@ class Interests extends Component {
                   <span>Articles</span>
                 </a>
               </li>
-              <li class="projects nav-item">
+              {/* <li class="projects nav-item">
                 <a class="nav-link" href="/#projects">
                   <span>Projects</span>
                 </a>
-              </li>
-              <li class="visual-projects nav-item">
+              </li> */}
+              {/* <li class="visual-projects nav-item">
                 <a class="nav-link" href="/#visual-projects">
                   <span>Visual Projects</span>
                 </a>
-              </li>
-              <li class="background nav-item">
+              </li> */}
+              {/* <li class="background nav-item">
                 <a class="nav-link" href="/#background">
                   <span>Background</span>
                 </a>
-              </li>
+              </li> */}
             </ul>
       
           </div>

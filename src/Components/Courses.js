@@ -13,7 +13,7 @@ class Courses extends Component {
                 <div className="vertical-space"></div>
                 <div className="col-sm-2 col-1"></div>
                 <div className="col-sm-8 col-10">
-                <h1 className="title  fadeInUp">Courses</h1>
+                <h1 className="title  fadeInUp">Blog Posts</h1>
                 <blockquote class="blockquote">
                     <p className='span-title-comment'>In this first series, you will learn the <span className='accent-color'>theory</span> and the <span className='accent-color'>fundamentals</span> of Deep Learning but also implement a <span className='accent-color'>Deep Learning framework from scratch</span> using only Python, numpy and maths.</p>
                 </blockquote>

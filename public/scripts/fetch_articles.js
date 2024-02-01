@@ -82,9 +82,11 @@ function formatHTMLFromPost(item) {
             ${shortenText(toText(item.content),60, 300)+ '...'}
             
          </div>
+         <!--
          <div class="d-flex align-items-center justify-content-center">
             <img class="publication-card__image small-img" src="${item.thumbnail}" alt="Article image"></img>
          </div>
+         -->
       </div>
       <hr/>
       <div class="very-small-vertical-space"></div>

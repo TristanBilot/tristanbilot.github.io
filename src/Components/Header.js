@@ -52,6 +52,11 @@ class Header extends Component {
                           <i class="fab fa-medium big-icon"></i>
                         </a>
                       </li>
+                      <li>
+                        <a itemProp="sameAs" href="https://twitter.com/tristanbilot" target="_blank" rel="noopener">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
                       {/* <li>
                         <a itemProp="sameAs" href="files/cv.pdf" target="_blank" rel="noopener">
                           <i class="ai ai-cv big-icon"></i>
@@ -66,12 +71,12 @@ class Header extends Component {
 
 
 
-                  <h1 id="about-me">About me</h1>
+                  <h1 id="about-me">About me 👋</h1>
                   <p></p>
 
                   <p>I am a PhD student from <a className='word-accent' href="https://www.universite-paris-saclay.fr/en/about/universite-paris-saclay"> Université Paris-Saclay</a>, member of <a className='word-accent' href="https://www.lisn.upsaclay.fr/">LISN</a> & <a className='word-accent' href="https://www.isep.fr/laboratoire-lisite-2-2/">LISITE</a> laboratories and Research Scientist at <a className='word-accent' href="https://www.iriguard.com/"> Iriguard</a>.</p>
 
-                  <p>My main research field is about Graph Deep Learning techniques applied to Cybersecurity.</p>
+                  <p>My primary area of research involves applying Graph Deep Learning techniques to Cybersecurity.</p>
 
                   <p>In life, I'm interested in Cosmology, life origins and traveling!</p>
 

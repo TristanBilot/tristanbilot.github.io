@@ -118,9 +118,9 @@ function App() {
             <Articles />
             {/* <Competences /> */}
             {/* <Interests /> */}
-            <Projects />
-            <VisualProjects />
-            <Background />
+            {/* <Projects /> */}
+            {/* <VisualProjects /> */}
+            {/* <Background /> */}
             {/* <Contact /> */}
             <Footer />
           </Route>
