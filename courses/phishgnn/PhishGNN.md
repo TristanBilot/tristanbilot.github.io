@@ -87,7 +87,7 @@ It is hard to find many phishing websites because of their short lifetime. Most 
 
 ## Crawling new websites
 
-The crawler is provided in order to add new examples to the initial small dataset. It is developed in `Rust` for efficiency concerns (i.e. Python is terribly slow for crawling tasks). The data extracted by the crawler is stored in a local `mongoDB` database, easy and fast to install.
+The crawler is provided in order to add new examples to the initial small dataset. It is developed in `Rust` for efficiency (Python is very slow at crawling). The data extracted by the crawler are stored in a local `mongoDB` database, easy and fast to install.
 
 ### Prerequisites
 
@@ -136,20 +136,31 @@ After adding one URL to the crawling queue with `add` and extracting the graph a
 
 #### Add multiple URLs to crawl
 
-Multiple URLs can be added to the crawling queue at the same time, either by using a space to separate URLs in the terminal, or more conveniently by writing all space-separated URLs in a file and giving this file content as input to the `add` command.
+Multiple URLs can be added to the crawling queue at the same time, either by using a space or a new line to separate URLs in the terminal. More conveniently, you may want to give as input to the crawler a list of URLs in a txt file. This can be done  by providing all URLs in the file as input to the `add` command.
 
 <pre class="code-style"><code class="lang-bash"> 
 $ echo "https://stackoverflow.com https://youtube.com" > input.txt
+$ cargo run core
 $ cargo run add $(&ltinput.txt)
 </code></pre>
 
 #### Export data
 
-After crawling, the data can be exported as CSV for downstream graph ML experiments.
+After crawling, the data are stored in the DB. They can be exported in CSV format for downstream tasks.
 
 <pre class="code-style"><code class="lang-bash"> 
 $ cargo run extract > dataset.csv
 </code></pre>
+
+### Integration with the PhishGNN framework
+
+For those who want to train a model based on the PhishGNN model, first run the crawler on your URLs and move the generated csv files into a new folder at the root of the repo: `data/train/raw/`. 
+Then, run `phishGNN/training.py` to train a new model. This will preprocess the dataset and store `.pt` files into `data/train/processed/`, train a random forest and GNN models. You can also save the trained models to disk to be used in prediction tasks.
+
+Once trained, run again the crawler with test URLs and move the generated dataset into a new folder `data/test/raw/`.
+Run `phishGNN/predict.py` and inference will be performed on the test URLs by loading the trained random forest and GNN model.
+
+Note: we recommend creating two distinct datasets for malicious and benign URLs and set manually the corresponding label into the dataset preprocessing code.
 
 ## License
 
