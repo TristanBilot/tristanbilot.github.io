@@ -3,9 +3,10 @@ const toggleBtn = document.querySelector('#toggle-btn')
 const approot = document.querySelector('#app-root')
 
 $(function($) {
-    const hours = new Date().getHours()
-    const isDayTime = hours > 6 && hours < 20
-    $(approot).addClass(isDayTime ? "theme-light" : "theme-dark")
+    // const hours = new Date().getHours()
+    // const isDayTime = hours > 6 && hours < 20
+    // $(approot).addClass(isDayTime ? "theme-light" : "theme-dark")
+    $(approot).addClass("theme-light")
 })
 
 $(toggleBody).click(() => {
@@ -16,3 +17,4 @@ $(toggleBody).click(() => {
     $(approot).toggleClass("theme-dark")
     $(approot).toggleClass("theme-light")
 })
+
