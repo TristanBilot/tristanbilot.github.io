@@ -94,7 +94,7 @@ class Header extends Component {
                       <li>
                           <i class="fa-li fa fa-briefcase"></i>
                           <div class="description">
-                            <p class="course">Visiting Research Student</p>
+                            <p class="course">Visiting Research Student, 2024</p>
 
                             <a href="https://www.cs.ubc.ca/">
                               <p class="institution">University of British Columbia (UBC)</p>
@@ -106,7 +106,7 @@ class Header extends Component {
                         <li>
                           <i class="fa-li fa fa-briefcase"></i>
                           <div class="description">
-                            <p class="course">Research Scientist</p>
+                            <p class="course">Research Scientist, 2022-</p>
 
                             <a href="https://www.iriguard.com/">
                               <p class="institution">Iriguard</p>
