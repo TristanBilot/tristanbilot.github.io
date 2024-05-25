@@ -80,7 +80,7 @@ class Header extends Component {
 
                   <p>My research focuses on leveraging Graph Deep Learning for the detection of complex attacks and anomalies. I work on topics such as Graph Neural Networks (GNNs), temporal graphs, Self-Supervised Learning (SSL), and intrusion detection at the network- and system-levels.</p>
 
-                  <p>In my free time, I actively contribute to open-source projects. Most notably, I have contributed to <a className='word-accent' href="https://github.com/ml-explore/mlx">Apple's MLX</a> framework, by implementing the backpropagation of multiple scattering operations. Alongside <a className='word-accent' href="https://scholar.google.it/citations?user=_7glimkAAAAJ&hl=it">Francesco Farina</a>, I co-developed <a className='word-accent' href="https://github.com/mlx-graphs/mlx-graphs">MLX-graphs</a>, a GPU-accelerated GNN library for Apple Silicon.
+                  <p>In my free time, I actively contribute to open-source projects. Most notably, I have contributed to <a className='word-accent' href="https://github.com/ml-explore/mlx">Apple's MLX</a> framework, by implementing the backpropagation of multiple scattering operations and by <a className='word-accent' href="https://github.com/TristanBilot/mlx-benchmark">benchmarking</a> the operations on Apple Silicon and CUDA GPUs. Alongside <a className='word-accent' href="https://scholar.google.it/citations?user=_7glimkAAAAJ&hl=it">Francesco Farina</a>, I co-developed <a className='word-accent' href="https://github.com/mlx-graphs/mlx-graphs">MLX-graphs</a>, a GPU-accelerated GNN library for Apple Silicon.
                   In life, I am passionate about Cosmology, the origins of life, and traveling!</p>
 
 
@@ -154,7 +154,7 @@ class Header extends Component {
                             <p class="course">Diplôme d'Ingénieur (MSc), 2019-2022</p>
 
                             <a href="http://www.epita.fr">
-                              <p class="institution">EPITA</p>
+                              <p class="institution">EPITA Engineering School</p>
                             </a>
 
                           </div>
