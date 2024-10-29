@@ -72,24 +72,21 @@ function getPostsSliceFromIndex(posts, index, nbPostsPerSlide) {
    return posts.slice(index * nbPostsPerSlide, (index + 1) * nbPostsPerSlide)
 }
 function formatHTMLFromPost(item) {
+   const img = (item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1];
+
    return `
    <a class="article-link" href="${item.link}">
-      <div class="publication-card animatable fadeInUp">
-         <div class="">
-            <h6>${shortenText(item.pubDate,0 ,10)}</h6>
-            <h3>${item.title}</h3>
-
-            ${shortenText(toText(item.content),60, 300)+ '...'}
-            
+      <div class="publication-card animatable fadeInUp d-flex">
+         <div class="text-section" style="flex: 1;">
+            <h6>${shortenText(item.pubDate, 0, 10)}</h6>
+            <h5>${item.title}</h5>
+            <p>${shortenText(toText(item.content), 60, 300) + '...'}</p>
          </div>
-         <!--
-         <div class="d-flex align-items-center justify-content-center">
-            <img class="publication-card__image small-img" src="${item.thumbnail}" alt="Article image"></img>
+         <div class="image-section d-flex align-items-center justify-content-center" style="flex: 1;">
+            <img class="publication-card__image small-img" src="${img}" alt="Article image">
          </div>
-         -->
       </div>
       <hr/>
-      <div class="very-small-vertical-space"></div>
    </a>
-   `
+   `;
 }

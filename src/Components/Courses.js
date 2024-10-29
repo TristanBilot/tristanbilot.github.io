@@ -15,7 +15,7 @@ class Courses extends Component {
                 <div className="col-sm-8 col-10">
                 <h1 className="title  fadeInUp">Blog Posts</h1>
                 <blockquote class="blockquote">
-                    <p className='span-title-comment'>In this first series, you will learn the <span className='accent-color'>theory</span> and the <span className='accent-color'>fundamentals</span> of Deep Learning but also implement a <span className='accent-color'>Deep Learning framework from scratch</span> using only Python, numpy and maths.</p>
+                    <p className='span-title-comment'>These are some notes that may be helpful to learn the <span className='accent-color'>theory</span> and the <span className='accent-color'>fundamentals</span> of Deep Learning. I also explain how to implement a simple <span className='accent-color'> Deep Learning framework from scratch</span> using only Python, numpy and maths.</p>
                 </blockquote>
                 
                 <div className="container-fluid position-relative">
