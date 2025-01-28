@@ -4,6 +4,7 @@ import intrusion_survey from '../resources/publications/intrusion_survey_figure.
 import malware_survey from '../resources/publications/malware_survey_figure.png';
 import csnet from '../resources/publications/csnet.png';
 import feae from '../resources/publications/feae.png';
+import orthrus from '../resources/publications/orthrus.png';
 import '../Styles/publications.sass';
 
 class Publications extends Component {
@@ -26,17 +27,38 @@ class Publications extends Component {
                         <div className="col-md-12">
 
                         <div className="publication-card animatable fadeInUp accent-box d-flex" style={{ display: 'flex' }}>
+                            <div className="text-section" style={{ flex: 1 }}>
+                              <h6>USENIX Security Symposium 2025 (USENIX Sec'25)</h6>
+                              <p>
+                                <p className="card-title">
+                                  ORTHRUS: Achieving High Quality of Attribution in Provenance-based Intrusion Detection Systems
+                                </p>
+                              </p>
+                              <p>Baoxiang Jiang, <u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Shahrear Iqba, Xueyuan Han, Thomas Pasquier</p>
+                              <br />
+                              <a href="https://tfjmp.org/publications/2025-usenixsec.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
+                              <a href="https://github.com/ubc-provenance/orthrus" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                            <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
+                              <img className="publication-card__image" src={orthrus} alt="Orthrus" />
+                            </div>
+                          </div>
+                          <div className="very-small-vertical-space"></div>
+
+                        <div className="publication-card animatable fadeInUp accent-box d-flex" style={{ display: 'flex' }}>
                           <div className="text-section" style={{ flex: 1 }}>
                             <i className="fa-solid fa-award"></i> <b>Best paper award</b>
                             <p>International Workshop on Security - IWSEC (2024)</p>
                             <p>
-                              <a className="card-title" href="https://dl.acm.org/doi/abs/10.1007/978-981-97-7737-2_15" target="_blank" rel="noopener noreferrer">
+                              <p className="card-title">
                                 Few Edges Are Enough: Few-Shot Network Attack Detection with Graph Neural Networks
-                              </a>
+                              </p>
                             </p>
-                            <span><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</span>
+                            <p><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</p>
                             <br />
-                            <a href="https://dl.acm.org/doi/abs/10.1007/978-981-97-7737-2_15" target="_blank" rel="noopener noreferrer">Paper</a>
+                            <a href="https://dl.acm.org/doi/abs/10.1007/978-981-97-7737-2_15" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a>
+                            <a href="https://github.com/TristanBilot/feae" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="/public_content/FEAE_slides.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
                           </div>
                           <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
                             <img className="publication-card__image" src={feae} alt="Malware survey GNNs" />
@@ -48,13 +70,13 @@ class Publications extends Component {
                             <div className="text-section" style={{ flex: 1 }}>
                               <h6>ACM Computing Surveys (2024)</h6>
                               <p>
-                                <a className="card-title" href="https://dl.acm.org/doi/10.1145/3664649" target="_blank" rel="noopener noreferrer">
+                                <p className="card-title">
                                   A Survey on Malware Detection with Graph Representation Learning
-                                </a>
+                                </p>
                               </p>
-                              <span><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</span>
+                              <p><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</p>
                               <br />
-                              <a href="https://dl.acm.org/doi/10.1145/3664649" target="_blank" rel="noopener noreferrer">Paper</a>
+                              <a href="https://dl.acm.org/doi/10.1145/3664649" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a>
                             </div>
                             <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
                               <img className="publication-card__image" src={malware_survey} alt="Malware survey GNNs" />
@@ -66,13 +88,13 @@ class Publications extends Component {
                             <div className="text-section" style={{ flex: 1 }}>
                               <h6>CSNet (2023)</h6>
                               <p>
-                                <a className="card-title" href="https://hal.science/hal-04186579/document" target="_blank" rel="noopener noreferrer">
+                                <p className="card-title">
                                   A Benchmark of Graph Augmentations for Contrastive Learning-Based Network Attack Detection with Graph Neural Networks
-                                </a>
+                                </p>
                               </p>
-                              <span><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</span>
+                              <p><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</p>
                               <br />
-                              <a href="https://hal.science/hal-04186579/document" target="_blank" rel="noopener noreferrer">Paper</a>
+                              <a href="https://hal.science/hal-04186579/document" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a>
                             </div>
                             <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
                               <img className="publication-card__image" src={csnet} alt="Benchmark contrastive learning" />
@@ -84,13 +106,13 @@ class Publications extends Component {
                             <div className="text-section" style={{ flex: 1 }}>
                               <h6>IEEE Access (2023)</h6>
                               <p>
-                                <a className="card-title" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10123384" target="_blank" rel="noopener noreferrer">
+                                <p className="card-title">
                                   Graph Neural Networks for Intrusion Detection: A Survey
-                                </a>
+                                </p>
                               </p>
-                              <span><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</span>
+                              <p><u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui</p>
                               <br />
-                              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10123384" target="_blank" rel="noopener noreferrer">Paper</a>
+                              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10123384" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a>
                             </div>
                             <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
                               <img className="publication-card__image" src={intrusion_survey} alt="Intrusion survey GNNs" />
@@ -102,14 +124,15 @@ class Publications extends Component {
                             <div className="text-section" style={{ flex: 1 }}>
                               <h6>SECRYPT (2022)</h6>
                               <p>
-                                <a className="card-title" href="https://www.researchgate.net/publication/361002272_PhishGNN_A_Phishing_Website_Detection_Framework_using_Graph_Neural_Networks" target="_blank" rel="noopener noreferrer">
+                                <p className="card-title">
                                   PhishGNN: A Phishing Website Detection Framework using Graph Neural Networks
-                                </a>
+                                </p>
                               </p>
-                              <span><u>Tristan Bilot</u>, Grégoire Geis, Badis Hammi</span>
+                              <p><u>Tristan Bilot</u>, Grégoire Geis, Badis Hammi</p>
                               <br />
-                              <a href="https://www.researchgate.net/publication/361002272_PhishGNN_A_Phishing_Website_Detection_Framework_using_Graph_Neural_Networks" target="_blank" rel="noopener noreferrer">Paper</a> 
-                              <a href="https://github.com/TristanBilot/phishGNN" target="_blank" rel="noopener noreferrer">Code</a>
+                              <a href="https://www.researchgate.net/publication/361002272_PhishGNN_A_Phishing_Website_Detection_Framework_using_Graph_Neural_Networks" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
+                              <a href="https://github.com/TristanBilot/phishGNN" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                              <a href="/public_content/PhishGNN_slides.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
                             </div>
                             <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
                               <img className="publication-card__image" src={kernel} alt="PhishGNN" />

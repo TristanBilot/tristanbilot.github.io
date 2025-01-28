@@ -25,6 +25,7 @@ class Header extends Component {
                     <div class="portrait-title">
                       <h2 itemProp="name">Tristan Bilot</h2>
                       <h3 itemProp="jobTitle">Ph.D. student &amp; Research Scientist</h3>
+                      <h3 itemProp="jobTitle">Cybersecutiy x (Graph) Deep Learning</h3>
                     </div>
 
                     <ul class="network-icon" aria-hidden="true">
@@ -76,11 +77,11 @@ class Header extends Component {
                   <p></p>
 
                   <p>I am a Ph.D. student from <a className='word-accent' href="https://www.universite-paris-saclay.fr/en/about/universite-paris-saclay"> Université Paris-Saclay</a>, member of <a className='word-accent' href="https://www.lisn.upsaclay.fr/?lang=en">LISN</a> & <a className='word-accent' href="https://en.isep.fr/research_at_isep/">LISITE</a> laboratories and Research Scientist at <a className='word-accent' href="https://www.iriguard.com/"> Iriguard</a>.
-                  Currently, I am a visiting research student in the CS department at the <a className='word-accent' href="https://www.cs.ubc.ca/">University of British Columbia</a> (<a className='word-accent' href="https://systopia.cs.ubc.ca/">Systopia Lab</a>), under the supervision of <a className='word-accent' href="https://tfjmp.org/">Thomas Pasquier</a>.</p>
+                  My research explores Graph Deep Learning for the detection of complex attacks and anomalies. I work on topics such as Graph Neural Networks (GNNs), temporal graphs, Self-Supervised Learning (SSL), and intrusion detection at the network- and system-levels.</p>
 
-                  <p>My research focuses on leveraging Graph Deep Learning for the detection of complex attacks and anomalies. I work on topics such as Graph Neural Networks (GNNs), temporal graphs, Self-Supervised Learning (SSL), and intrusion detection at the network- and system-levels.</p>
-
-                  <p>In my free time, I actively contribute to open-source projects. Most notably, I have contributed to <a className='word-accent' href="https://github.com/ml-explore/mlx">Apple's MLX</a> framework, by implementing the backpropagation of multiple scattering operations and by <a className='word-accent' href="https://github.com/TristanBilot/mlx-benchmark">benchmarking</a> the operations on Apple Silicon and CUDA GPUs. Alongside <a className='word-accent' href="https://scholar.google.it/citations?user=_7glimkAAAAJ&hl=it">Francesco Farina</a>, I co-developed <a className='word-accent' href="https://github.com/mlx-graphs/mlx-graphs">MLX-graphs</a>, a GPU-accelerated GNN library for Apple Silicon.
+                  <p>Curently, my work focuses on provenance-based intrusion detection, under the supervision of <a className='word-accent' href="https://tfjmp.org/">Thomas Pasquier</a> at the <a className='word-accent' href="https://www.cs.ubc.ca/">University of British Columbia</a> (<a className='word-accent' href="https://systopia.cs.ubc.ca/">Systopia Lab</a>).</p>
+                  
+                  <p>In my free time, I actively contribute to open-source projects. Most notably, I have contributed to <a className='word-accent' href="https://github.com/ml-explore/mlx">Apple's MLX</a> framework, by implementing the backpropagation of multiple scattering operations and by <a className='word-accent' href="https://github.com/TristanBilot/mlx-benchmark">benchmarking</a> the operations on Apple Silicon and CUDA GPUs. I also co-created <a className='word-accent' href="https://github.com/mlx-graphs/mlx-graphs">MLX-graphs</a>, a GPU-accelerated GNN library for Apple Silicon.
                   In life, I am passionate about Cosmology, the origins of life, and traveling!</p>
 
 
