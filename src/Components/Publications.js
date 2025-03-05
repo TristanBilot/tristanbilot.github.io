@@ -34,7 +34,7 @@ class Publications extends Component {
                                   ORTHRUS: Achieving High Quality of Attribution in Provenance-based Intrusion Detection Systems
                                 </p>
                               </p>
-                              <p>Baoxiang Jiang, <u>Tristan Bilot</u>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Shahrear Iqba, Xueyuan Han, Thomas Pasquier</p>
+                              <p>Baoxiang Jiang<sup>*</sup>, <u>Tristan Bilot</u><sup>*</sup>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Shahrear Iqba, Xueyuan Han, Thomas Pasquier (<sup>*</sup>Joint first author)</p>
                               <br />
                               <a href="https://tfjmp.org/publications/2025-usenixsec.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
                               <a href="https://github.com/ubc-provenance/orthrus" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
