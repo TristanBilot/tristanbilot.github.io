@@ -5,6 +5,7 @@ import malware_survey from '../resources/publications/malware_survey_figure.png'
 import csnet from '../resources/publications/csnet.png';
 import feae from '../resources/publications/feae.png';
 import orthrus from '../resources/publications/orthrus.png';
+import velox from '../resources/publications/velox.png';
 import '../Styles/publications.sass';
 
 class Publications extends Component {
@@ -31,12 +32,31 @@ class Publications extends Component {
                               <h6>USENIX Security Symposium 2025 (USENIX Sec'25)</h6>
                               <p>
                                 <p className="card-title">
+                                  Sometimes Simpler is Better: A Comprehensive Analysis of State-of-the-Art Provenance-Based Intrusion Detection Systems
+                                </p>
+                              </p>
+                              <p><u>Tristan Bilot</u>, Baoxiang Jiang, Zefeng Li, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Thomas Pasquier</p>
+                              <br />
+                              <a href="https://tfjmp.org/publications/2025-usenixsec-2.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
+                              <a href="https://github.com/ubc-provenance/PIDSMaker" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                            <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
+                              <img className="publication-card__image" src={velox} alt="Velox" />
+                            </div>
+                          </div>
+                          <div className="very-small-vertical-space"></div>
+                        
+                        <div className="publication-card animatable fadeInUp accent-box d-flex" style={{ display: 'flex' }}>
+                            <div className="text-section" style={{ flex: 1 }}>
+                              <h6>USENIX Security Symposium 2025 (USENIX Sec'25)</h6>
+                              <p>
+                                <p className="card-title">
                                   ORTHRUS: Achieving High Quality of Attribution in Provenance-based Intrusion Detection Systems
                                 </p>
                               </p>
                               <p>Baoxiang Jiang<sup>*</sup>, <u>Tristan Bilot</u><sup>*</sup>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Shahrear Iqba, Xueyuan Han, Thomas Pasquier (<sup>*</sup>Joint first author)</p>
                               <br />
-                              <a href="https://tfjmp.org/publications/2025-usenixsec.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
+                              <a href="https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-103-jiang-baoxiang.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
                               <a href="https://github.com/ubc-provenance/orthrus" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                             <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
