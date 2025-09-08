@@ -77,12 +77,14 @@ class Header extends Component {
                   <p></p>
 
                   <p>I am a Ph.D. student from <a className='word-accent' href="https://www.universite-paris-saclay.fr/en/about/universite-paris-saclay"> Université Paris-Saclay</a>, member of <a className='word-accent' href="https://www.lisn.upsaclay.fr/?lang=en">LISN</a> & <a className='word-accent' href="https://en.isep.fr/research_at_isep/">LISITE</a> laboratories and Research Scientist at <a className='word-accent' href="https://www.iriguard.com/"> Iriguard</a>.
-                  My research explores graph deep learning for the detection of complex attacks. I work on topics such as Graph Neural Networks (GNNs), self-supervised learning, intrusion detection and code profiling.</p>
+                  My research explores anomaly-based intrusion detection with graph learning.
+                  I work on topics such as graph transformers, graph neural networks and self-supervised learning applied to cybersecurity, notably provenance-based and network-based intrusion detection.</p>
 
-                  <p>Curently, my work focuses on fine-tuning LLMs for cybersecurity use cases and exploring efficient graph transformer architectures for capturing long-range relationships in provenance graphs.</p>
+
+                  <p>Curently, my work is  at the intersection of LLMs for security and the security of LLMs.</p>
                   
-                  <p>In my free time, I actively contribute to open-source projects. Most notably, I have contributed to <a className='word-accent' href="https://github.com/ml-explore/mlx">Apple's MLX</a> framework, by implementing the backpropagation of multiple scattering operations and by <a className='word-accent' href="https://github.com/TristanBilot/mlx-benchmark">benchmarking</a> the operations on Apple Silicon and CUDA GPUs. I also co-created <a className='word-accent' href="https://github.com/mlx-graphs/mlx-graphs">MLX-graphs</a>, a GPU-accelerated GNN library for Apple Silicon.
-                  In life, I am passionate about Cosmology, the origins of life, and traveling!</p>
+                  {/* <p>In my free time, I actively contribute to open-source projects. Most notably, I have contributed to <a className='word-accent' href="https://github.com/ml-explore/mlx">Apple's MLX</a> framework, by implementing the backpropagation of multiple scattering operations and by <a className='word-accent' href="https://github.com/TristanBilot/mlx-benchmark">benchmarking</a> the operations on Apple Silicon and CUDA GPUs. I also co-created <a className='word-accent' href="https://github.com/mlx-graphs/mlx-graphs">MLX-graphs</a>, a GPU-accelerated GNN library for Apple Silicon.</p> */}
+                  {/* In life, I am passionate about Cosmology, the origins of life, and traveling!</p> */}
 
 
                   <div class="row">

@@ -37,7 +37,7 @@ class Publications extends Component {
                               </p>
                               <p><u>Tristan Bilot</u>, Baoxiang Jiang, Zefeng Li, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Thomas Pasquier</p>
                               <br />
-                              <a href="https://tfjmp.org/publications/2025-usenixsec-2.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
+                              <a href="https://www.usenix.org/system/files/usenixsecurity25-bilot.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
                               <a href="https://github.com/ubc-provenance/PIDSMaker" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                             <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
@@ -56,7 +56,7 @@ class Publications extends Component {
                               </p>
                               <p>Baoxiang Jiang<sup>*</sup>, <u>Tristan Bilot</u><sup>*</sup>, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Shahrear Iqba, Xueyuan Han, Thomas Pasquier (<sup>*</sup>Joint first author)</p>
                               <br />
-                              <a href="https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-103-jiang-baoxiang.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
+                              <a href="https://www.usenix.org/system/files/usenixsecurity25-jiang-baoxiang.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
                               <a href="https://github.com/ubc-provenance/orthrus" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                             <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
