@@ -78,7 +78,7 @@ class Publications extends Component {
                             <br />
                             <a href="https://dl.acm.org/doi/abs/10.1007/978-981-97-7737-2_15" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a>
                             <a href="https://github.com/TristanBilot/feae" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="/public_content/FEAE_slides.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
+                            <a href="/public_content/slides_FEAE.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
                           </div>
                           <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
                             <img className="publication-card__image" src={feae} alt="Malware survey GNNs" />
@@ -152,7 +152,7 @@ class Publications extends Component {
                               <br />
                               <a href="https://www.researchgate.net/publication/361002272_PhishGNN_A_Phishing_Website_Detection_Framework_using_Graph_Neural_Networks" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
                               <a href="https://github.com/TristanBilot/phishGNN" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
-                              <a href="/public_content/PhishGNN_slides.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
+                              <a href="/public_content/slides_PhishGNN.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Slides</a>
                             </div>
                             <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
                               <img className="publication-card__image" src={kernel} alt="PhishGNN" />
