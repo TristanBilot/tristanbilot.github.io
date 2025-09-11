@@ -1,200 +1,97 @@
 import React, { Component } from 'react';
 import '../Styles/header.sass';
 import '../Styles/toggle-btn.scss';
-import me from '../resources/me3.jpeg';
+import '../Styles/first_page.sass';
+import me from '../resources/me4.jpg';
 
-class Header extends Component {
-
-  render() {
-    return (
-      <div id="intro" className="header">
-      <div class="header-top-space"></div>
-
-        <div className="container-fluid position-relative header-global">
-          <div className="row align-items-center">
-            <div className="col-lg-2 col-1 col-lg-"></div>
-            <div className="col-lg-8 col-10">
-
-              <div class="row" itemProp="author" itemScope="" itemType="http://schema.org/Person" itemRef="person-email">
-                <div class="col-xs-12 col-md-4">
-                  <div id="profile">
-
-                    <div class="portrait" style={{ backgroundImage: "url(" + me + ")" }}>
+const Header = () => {
+  return (
+    <div id="intro" className="header">
+      <div className="hero-inner">
+        {/* avatar */}
+        <div class="portrait" style={{ backgroundImage: "url(" + me + ")" }}>
                     </div>
 
-                    <div class="portrait-title">
-                      <h2 itemProp="name">Tristan Bilot</h2>
-                      <h3 itemProp="jobTitle">Ph.D. student &amp; Research Scientist</h3>
-                      <h3 itemProp="jobTitle">Cybersecutiy x (Graph) Deep Learning</h3>
-                    </div>
+        {/* name */}
+        <span className="title">Tristan Bilot</span>
+        <span className="hero-tagline">
+          I&apos;m a Ph.D. student at Université Paris-Saclay working on <span className='accent-color'>graph learning</span> and <span className='accent-color'>LLMs</span> for cybersecurity.
+        </span>
+        {/* <h6>I'm a Ph.D. student at Université Paris-Saclay. My research focuses on graph learning and LLMs applied to cybersecurity.</h6> */}
 
-                    <ul class="network-icon" aria-hidden="true">
-                      <li>
-                        <a itemProp="sameAs" href="mailto:tristan.bilot@universite-paris-saclay.fr" target="_blank" rel="noopener">
-                          <i class="fa fa-envelope big-icon"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a itemProp="sameAs" href="https://scholar.google.fr/citations?user=ijVNAGYAAAAJ&hl=fr&oi=ao" target="_blank" rel="noopener">
-                          <i class="ai ai-google-scholar big-icon"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a itemProp="sameAs" href="https://github.com/TristanBilot" target="_blank" rel="noopener">
-                          <i class="fab fa-github big-icon"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a itemProp="sameAs" href="https://www.linkedin.com/in/tristan-bilot/" target="_blank" rel="noopener">
-                          <i class="fab fa-linkedin big-icon"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a itemProp="sameAs" href="https://tristanbilot.medium.com" target="_blank" rel="noopener">
-                          <i class="fab fa-medium big-icon"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a itemProp="sameAs" href="https://x.com/tristanbilot" target="_blank" rel="noopener">
-                          <i class="fa-brands fa-x-twitter big-icon"></i>
-                        </a>
-                      </li>
-                      {/* <li>
-                        <a itemProp="sameAs" href="files/cv.pdf" target="_blank" rel="noopener">
-                          <i class="ai ai-cv big-icon"></i>
-                        </a>
-                      </li> */}
+        {/* icons (exact SVGs and order) */}
+        
+        <div className="hero-icons" aria-label="profiles and links">
+          <a href="/public_content/cv.pdf" className='cv-logo' target="_blank" rel="noopener noreferrer" title="CV" aria-label="CV">CV</a>
 
-                    </ul>
+          <a href="mailto:tristan.bilot@universite-paris-saclay.fr" target="_blank" rel="noopener noreferrer" title="Email" aria-label="Email">
+            {/* Email */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
 
-                  </div>
-                </div>
-                <div class="col-xs-12 col-md-8" itemProp="description">
+          <a href="https://scholar.google.fr/citations?user=ijVNAGYAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar">
+            {/* Google Scholar */}
+            <svg viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5.242 13.769L0.5 9.5 12 1l11.5 9-5.242 3.769C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+            </svg>
+          </a>
 
+          <a href="https://github.com/TristanBilot" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+            {/* GitHub */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
 
+          <a href="https://x.com/tristanbilot" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter/X">
+            {/* X/Twitter */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
 
-                  <h1 id="about-me">About me</h1>
-                  <p></p>
+          <a href="https://tristanbilot.medium.com" target="_blank" rel="noopener noreferrer" title="BlueSky" aria-label="BlueSky">
+            {/* BlueSky */}
+            <i class="fab fa-medium big-icon"></i>
+          </a>
 
-                  <p>I am a Ph.D. student from <a className='word-accent' href="https://www.universite-paris-saclay.fr/en/about/universite-paris-saclay"> Université Paris-Saclay</a>, member of <a className='word-accent' href="https://www.lisn.upsaclay.fr/?lang=en">LISN</a> & <a className='word-accent' href="https://en.isep.fr/research_at_isep/">LISITE</a> laboratories and Research Scientist at <a className='word-accent' href="https://www.iriguard.com/"> Iriguard</a>.
-                  My research explores anomaly-based intrusion detection with graph learning.
-                  I work on topics such as graph transformers, graph neural networks and self-supervised learning applied to cybersecurity, notably provenance-based and network-based intrusion detection.</p>
-
-
-                  <p>Curently, my work is  at the intersection of LLMs for security and the security of LLMs.</p>
-                  
-                  {/* <p>In my free time, I actively contribute to open-source projects. Most notably, I have contributed to <a className='word-accent' href="https://github.com/ml-explore/mlx">Apple's MLX</a> framework, by implementing the backpropagation of multiple scattering operations and by <a className='word-accent' href="https://github.com/TristanBilot/mlx-benchmark">benchmarking</a> the operations on Apple Silicon and CUDA GPUs. I also co-created <a className='word-accent' href="https://github.com/mlx-graphs/mlx-graphs">MLX-graphs</a>, a GPU-accelerated GNN library for Apple Silicon.</p> */}
-                  {/* In life, I am passionate about Cosmology, the origins of life, and traveling!</p> */}
-
-
-                  <div class="row">
-
-
-                    <div class="col-sm-5">
-                      <h3>Recent Experience</h3>
-                      <ul class="ul-edu fa-ul">
-
-                      <li>
-                          <i class="fa-li fa fa-briefcase"></i>
-                          <div class="description">
-                            <p class="course">Visiting Research Student, 2024</p>
-
-                            <a href="https://www.cs.ubc.ca/">
-                              <p class="institution">University of British Columbia (UBC)</p>
-                            </a>
-
-                          </div>
-                        </li>
-                        
-                        <li>
-                          <i class="fa-li fa fa-briefcase"></i>
-                          <div class="description">
-                            <p class="course">Research Scientist, 2022-</p>
-
-                            <a href="https://www.iriguard.com/">
-                              <p class="institution">Iriguard</p>
-                            </a>
-
-                          </div>
-                        </li>
-
-                        <li>
-                          <i class="fa-li fa fa-briefcase"></i>
-                          <div class="description">
-                            <p class="course">Software/Data Engineer apprentice, 2019-2022</p>
-
-                            <a href="https://www.carrefour.fr/">
-                              <p class="institution">Carrefour-Google AI Lab</p>
-                            </a>
-
-                          </div>
-                        </li>
-
-                      </ul>
-                    </div>
-
-
-
-                    <div class="col-sm-7">
-                      <h3>Education</h3>
-                      <ul class="ul-edu fa-ul">
-
-                        <li>
-                          <i class="fa-li fa fa-graduation-cap"></i>
-                          <div class="description">
-                            <p class="course">Ph.D. student, 2022-</p>
-
-                            <a href="https://www.universite-paris-saclay.fr/en/about/universite-paris-saclay">
-                              <p class="institution">Université Paris-Saclay</p>
-                            </a>
-
-                          </div>
-                        </li>
-
-                        <li>
-                          <i class="fa-li fa fa-graduation-cap"></i>
-                          <div class="description">
-                            <p class="course">Diplôme d'Ingénieur (MSc), 2019-2022</p>
-
-                            <a href="http://www.epita.fr">
-                              <p class="institution">EPITA Engineering School</p>
-                            </a>
-
-                          </div>
-                        </li>
-
-                        <li>
-                          <i class="fa-li fa fa-graduation-cap"></i>
-                          <div class="description">
-                            <p class="course">Diplôme Universitaire de Technologie, 2017-2019</p>
-
-                            <a href="https://u-paris.fr/en/">
-                              <p class="institution">Université Paris-Descartes</p>
-                            </a>
-
-                          </div>
-                        </li>
-
-                      </ul>
-                    </div>
-
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div className="col-lg-2 col-1"></div>
-          </div>
+          <a href="https://www.linkedin.com/in/tristan-bilot/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+            {/* LinkedIn */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
         </div>
-        <div class="background">
+        {/* buttons */}
+        {/* <div className="hero-ctas">
+          <a className="button" href="/#publications" rel="noopener" title="Research">
+            Publications
+          </a>
+          <a className="button" href="/#courses" rel="noopener" title="Research">
+            Blog Posts
+          </a>
+          <a className="button" href="/#articles" rel="noopener" title="Research">
+            Articles
+          </a>
+        </div> */}
+      </div>
+      <div class="background">
           <div class="toggle-body">
             <div id="toggle-btn" class="toggle-btn"></div>
           </div>
         </div>
-      </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Header;

@@ -1,0 +1,52 @@
+@import 'theme.scss'
+.main-title
+    fotn-size: 42px
+
+.hero-inner
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 10px
+
+.button
+    background: rgb(214, 214, 214)
+    border-radius: 8px
+    margin: 8px 16px 8px 0
+    padding: 8px
+    transition: transform .1s
+
+    &:hover
+        transform: translateY(-1px)
+        box-shadow: 0 4px 10px rgba(0,0,0,.06)
+
+.cv-logo
+    font-weight: 500
+    font-size: 150%
+    
+.hero-icons
+  display: flex
+  gap: 18px
+  justify-content: left
+  list-style: none
+  padding: 0
+  margin: 8px 0 24px 0
+
+  a
+    display: inline-flex
+    width: 32px
+    height: 32px
+    align-items: center
+    justify-content: center
+    border-radius: 8px
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease
+    @include themify($themes)
+        color: themed('text-color')
+    text-decoration: none
+
+    &:hover
+      transform: translateY(-1.5px)
+    //   box-shadow: 0 4px 10px rgba(0,0,0,.06)
+
+    svg
+      width: 28px
+      height: 28px

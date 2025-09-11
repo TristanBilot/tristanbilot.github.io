@@ -15,15 +15,16 @@ class Publications extends Component {
       <div id="publications" className="header">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-sm-2 col-1"></div>
-            <div className="col-sm-8 col-10">
+          <div className="small-vertical-space"></div>
+            <div className="col-sm-2 col-0"></div>
+            <div className="col-sm-8 col-12">
                 <div className="block">
                     <div className="vertical-space-only-mobile"></div>
                     <h1 className="title  fadeInUp">Publications</h1>
                     <blockquote class="blockquote">
                         <p className='span-title-comment'>Publications related to my <span className='accent-color'>research work</span>.</p>
                     </blockquote>
-                    <div className="small-vertical-space"></div>
+                    <div className="very-small-vertical-space"></div>
                     <div className="row animatable fadeInUp">
                         <div className="col-md-12">
 
@@ -165,6 +166,7 @@ class Publications extends Component {
                     </div>
                 </div>
             </div>
+            <div className="col-sm-2 col-0"></div>
           </div>
         </div>
       </div>

@@ -8,15 +8,15 @@ class Articles extends Component {
       <div id="articles" className="header">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-sm-2 col-1"></div>
-            <div className="col-sm-8 col-10">
-              <div className="vertical-space"></div>
+            <div className="col-sm-2 col-0"></div>
+            <div className="col-sm-8 col-12">
+              <div className="small-vertical-space"></div>
               <div className="block">
                 <h1 className="title animate-letters-accent animatable fadeInUp">Medium articles</h1>
                 <blockquote class="blockquote">
                   <p className='span-title-comment'>I use to write <span className='accent-color'> Medium articles</span> on various engineering/programming topics, to <span className='accent-color'>help the community</span> on issues I encountered over the last years.</p>
                 </blockquote>
-                <div className="small-vertical-space"></div>
+                <div className="very-small-vertical-space"></div>
 
                 <div className="row animatable fadeInUp">
                   <div className="col-md-12">
@@ -35,7 +35,7 @@ class Articles extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-sm-2 col-1"></div>
+            <div className="col-sm-2 col-0"></div>
           </div>
         </div>
       </div>

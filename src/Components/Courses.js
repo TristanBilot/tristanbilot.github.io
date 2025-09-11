@@ -10,12 +10,12 @@ class Courses extends Component {
         <div id="courses" className="header">
             <div className="container-fluid position-relative">
             <div className="row">
-                <div className="vertical-space"></div>
-                <div className="col-sm-2 col-1"></div>
-                <div className="col-sm-8 col-10">
+                <div className="small-vertical-space"></div>
+                <div className="col-sm-2 col-0"></div>
+                <div className="col-sm-8 col-12">
                 <h1 className="title  fadeInUp">Blog Posts</h1>
                 <blockquote class="blockquote">
-                    <p className='span-title-comment'>These are some notes that may be helpful to learn the <span className='accent-color'>theory</span> and the <span className='accent-color'>fundamentals</span> of Deep Learning. I also explain how to implement a simple <span className='accent-color'> Deep Learning framework from scratch</span> using only Python, numpy and maths.</p>
+                    <p className='span-title-comment'>These are some notes that may be helpful to learn the <span className='accent-color'>theory</span> and the <span className='accent-color'>fundamentals</span> of Deep Learning. I also explain how to implement a simple <span className='accent-color'> autodiff engine from scratch</span> using only Python, numpy and maths.</p>
                 </blockquote>
                 
                 <div className="container-fluid position-relative">
@@ -105,7 +105,7 @@ class Courses extends Component {
                     </div>
                 </div>
 
-                <div className="col-sm-2 col-1"></div>
+                <div className="col-sm-2 col-0"></div>
             </div>
             </div>
 

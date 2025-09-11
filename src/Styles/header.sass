@@ -21,6 +21,15 @@
 .full-height
   height: 100vh
 
+#intro
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  @include themify($themes)
+    color: themed('text-color')
+
 .header-subtitle
   text-align: left
   @include themify($themes)
@@ -28,6 +37,7 @@
   font-size: 23px
   padding-top: 10px
   margin-bottom: 0
+
 
 .header-cv
   font-size: 20px
@@ -46,9 +56,9 @@
 
 
 .portrait
-  width: 200px
-  height: 200px
-  margin: 0 auto
+  width: 175px
+  height: 175px
+  // margin: 0 auto
   border-radius: 50%
   background-size: cover
 
@@ -114,4 +124,11 @@ ul.ul-edu li .description p.institution
     height: 100%
 
   #intro
-    padding-top: 100px
+    height: 80vh
+
+  .hero-inner
+    align-items: center !important
+
+  .hero-tagline
+    padding-left: 20px
+    padding-right: 20px
