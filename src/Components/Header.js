@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../Styles/header.sass';
 import '../Styles/toggle-btn.scss';
 import '../Styles/first_page.sass';
-import me from '../resources/me4.jpg';
+import me from '../resources/me4.jpeg';
 
 const Header = () => {
   return (
