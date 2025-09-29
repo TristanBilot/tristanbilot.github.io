@@ -1,4 +1,5 @@
 import Header from './Components/Header'
+import News from './Components/News'
 import Background from './Components/Background'
 import Competences from './Components/Competences'
 import Articles from './Components/Articles'
@@ -113,6 +114,7 @@ function App() {
           <Route path='/'>
             <NavBar />
             <Header />
+            <News />
             <Publications />
             <Courses />
             <Articles />

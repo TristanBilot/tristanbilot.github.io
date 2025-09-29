@@ -13,13 +13,14 @@ $iteration: 1;
     background: themed('text-color');
   }
   border-radius: 2rem;
-  animation: angle-reverse $switch-transition-delay $easing;
+  // uncomment for animation
+  // animation: angle-reverse $switch-transition-delay $easing;
   cursor: pointer;
 }
-.toggle-body--on {
-  animation: angle $switch-transition-delay $easing;
-  animation-direction: alternate;
-}
+// .toggle-body--on {
+//   animation: angle $switch-transition-delay $easing;
+//   animation-direction: alternate;
+// }
 .toggle-btn {
   width: 1rem;
   height: 1rem;

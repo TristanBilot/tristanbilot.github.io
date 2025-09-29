@@ -25,6 +25,9 @@ class Interests extends Component {
               <li className="intro nav-item">
                 <a className="nav-link" href="/#intro"><span>About</span></a>
               </li>
+              <li className="news nav-item">
+                <a className="nav-link" href="/#news"><span>News</span></a>
+              </li>
               <li className="publications nav-item">
                 <a className="nav-link" href="/#publications"><span>Publications</span></a>
               </li>
