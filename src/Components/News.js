@@ -19,11 +19,11 @@ class News extends Component {
                         <div className="col-md-12">
 
                         <p className='span-title-comment'><b><span className='accent-color'>[02/02/2026]</span></b> 🇨🇦 - I will join <b>UBC</b> as a <b>Postdoctoral Fellow</b>! </p>
-                        <p className='span-title-comment'><b><span className='accent-color'>[06/10/2025]</span></b> 🇺🇸 - I will join <b>Amazon</b> as an <b>Applied Scientist intern</b> based in <b>New York City</b>! </p>
                         <p className='span-title-comment'><b><span className='accent-color'>[17/11/2025]</span></b> 🎓 - My <b>PhD Defense</b> will take place at Université Paris-Saclay in November </p>
 
                         <hr></hr>
 
+                        <p className='span-title-comment'><b><span className='accent-color'>[06/10/2025]</span></b> 🇺🇸 - I've joined <b>Amazon</b> as an <b>Applied Scientist intern</b> based in <b>New York City</b>! </p>
                         <p className='span-title-comment'><b><span className='accent-color'>[27/08/2025]</span></b> 📑 - Our <b><a href="https://www.usenix.org/publications/loginonline/toward-practical-and-usable-provenance-based-intrusion-detection-systems">USENIX ;login: article</a></b> is out!</p>
                         <p className='span-title-comment'><b><span className='accent-color'>[13/08/2025]</span></b> 📑 - We got <b>two papers</b> accepted at <b>USENIX Sec'25</b>!</p>
                         <p className='span-title-comment'><b><span className='accent-color'>[05/06/2025]</span></b> 💻 - We have open-sourced <b><a href="https://github.com/ubc-provenance/PIDSMaker">PIDSMaker</a></b>, a framework for building provenance-based IDSs</p>
