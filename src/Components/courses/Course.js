@@ -50,20 +50,42 @@ const Course = (props) => {
         return
         
       let btns = []
-      if (props.prev_course["course_path"] != "")
+
+      if (props.prev_course["course_path"] !== "") {
         btns.push(
-          <div className='float-start'>
-            <i class="fas fa-chevron-left"></i>
-            <Link to={props.prev_course["url"]} class="ms-1" target="_blank" rel="noopener noreferrer">{props.prev_course["name"]}</Link>
+          <div className="float-start" key="prev">
+            <i className="fas fa-chevron-left"></i>
+            <a
+              href={`#${props.prev_course["url"]}`}   // note the '#' for HashRouter
+              className="ms-1"
+              onClick={() => {
+                // force a full reload after navigation
+                // small timeout ensures the hash updates first
+                setTimeout(() => window.location.reload(), 0)
+              }}
+            >
+              {props.prev_course["name"]}
+            </a>
           </div>
         )
-      if (props.next_course["course_path"] != "")
+      }
+
+      if (props.next_course["course_path"] !== "") {
         btns.push(
-          <div className='float-end'>
-          <Link to={props.next_course["url"]} target="_blank" rel="noopener noreferrer">{props.next_course["name"]}</Link>
-            <i class="fas fa-chevron-right ms-1"></i>
+          <div className="float-end" key="next">
+            <a
+              href={`#${props.next_course["url"]}`}   // again, hash URL
+              onClick={() => {
+                setTimeout(() => window.location.reload(), 0)
+              }}
+            >
+              {props.next_course["name"]}
+            </a>
+            <i className="fas fa-chevron-right ms-1"></i>
           </div>
         )
+      }
+
       return btns
     }
 

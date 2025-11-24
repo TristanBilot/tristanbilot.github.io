@@ -8,8 +8,8 @@ class Articles extends Component {
       <div id="articles" className="header">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-sm-2 col-0"></div>
-            <div className="col-sm-8 col-12">
+            <div className="col-sm-3 col-0"></div>
+            <div className="col-sm-6 col-12">
               <div className="small-vertical-space"></div>
               <div className="block">
                 <h1 className="title animate-letters-accent animatable fadeInUp">Medium articles</h1>
@@ -35,7 +35,7 @@ class Articles extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-sm-2 col-0"></div>
+            <div className="col-sm-3 col-0"></div>
           </div>
         </div>
       </div>

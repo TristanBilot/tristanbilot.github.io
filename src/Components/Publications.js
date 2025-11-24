@@ -16,8 +16,8 @@ class Publications extends Component {
         <div className="container-fluid">
           <div className="row">
           <div className="small-vertical-space"></div>
-            <div className="col-sm-2 col-0"></div>
-            <div className="col-sm-8 col-12">
+            <div className="col-sm-3 col-0"></div>
+            <div className="col-sm-6 col-12">
                 <div className="block">
                     <div className="vertical-space-only-mobile"></div>
                     <h1 className="title  fadeInUp">Publications</h1>
@@ -166,7 +166,7 @@ class Publications extends Component {
                     </div>
                 </div>
             </div>
-            <div className="col-sm-2 col-0"></div>
+            <div className="col-sm-3 col-0"></div>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ const Header = () => {
         {/* name */}
         <span className="title">Tristan Bilot</span>
         <span className="hero-tagline">
-          I&apos;m a Ph.D. student at Université Paris-Saclay working on <span className='accent-color'>graph learning</span> and <span className='accent-color'>LLMs</span> for cybersecurity.
+          I am a researcher working on applications of  <span className='accent-color'>AI for security</span> and  <span className='accent-color'>security for AI</span>.
         </span>
         {/* <h6>I'm a Ph.D. student at Université Paris-Saclay. My research focuses on graph learning and LLMs applied to cybersecurity.</h6> */}
 
