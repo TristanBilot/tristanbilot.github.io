@@ -36,7 +36,7 @@
 /*----- TIMELINE ITEM -----*/
 
 .timeline-item {
-    padding-left: 40px;
+    padding-left: 60px;
     position: relative;
     &:last-child {
         padding-bottom: 0;
@@ -96,7 +96,7 @@
 /*----- TIMELINE CONTENT -----*/
 
 .timeline-content {
-    padding-bottom: 40px;
+    // padding-bottom: 10px;
     p:last-child {
         margin-bottom: 0;
     }

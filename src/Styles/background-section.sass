@@ -1,0 +1,93 @@
+@import 'theme.scss'
+
+.background-section
+  .timeline
+    position: relative
+    padding-left: 0
+    list-style: none
+
+    &::before
+      content: ''
+      position: absolute
+      left: 22px
+      top: 0
+      bottom: 0
+      width: 2px
+      @include themify($themes)
+        background: themed('accent-color')
+      opacity: 0.3
+
+  .timeline-item
+    display: flex
+    align-items: flex-start
+    margin-bottom: 28px
+    position: relative
+
+    &:last-child
+      margin-bottom: 0
+
+  .timeline-logo
+    width: 46px
+    height: 46px
+    min-width: 46px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    background: white
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+    z-index: 1
+    overflow: hidden
+
+    img
+      width: 30px
+      height: 30px
+      object-fit: contain
+
+  .timeline-content
+    margin-left: 20px
+    padding-top: 2px
+
+    .timeline-role
+      font-size: 16px
+      font-weight: 600
+      @include themify($themes)
+        color: themed('text-color')
+
+    .timeline-org
+      font-size: 15px
+      font-weight: 400
+      @include themify($themes)
+        color: themed('accent-color')
+
+    .timeline-details
+      font-size: 14px
+      margin-top: 2px
+      @include themify($themes)
+        color: themed('text-color-secondary')
+
+@media (max-width: 800px)
+  .background-section
+    .timeline-item
+      margin-bottom: 22px
+
+    .timeline-logo
+      width: 40px
+      height: 40px
+      min-width: 40px
+
+      img
+        width: 26px
+        height: 26px
+
+    .timeline-content
+      margin-left: 14px
+
+      .timeline-role
+        font-size: 15px
+
+      .timeline-org
+        font-size: 14px
+
+      .timeline-details
+        font-size: 13px
