@@ -92,16 +92,17 @@ class Courses extends Component {
                     </div>
 
                     <div className="row animatable fadeInUp">
-                        <div class="col-md-6">
+                    <div class="col-md-6">
                             <div class="courses-block accent-box">
-                                <Link to={`/phishgnn`}>
-                                    <h2><span class="course-nb">1</span> PhishGNN-22 dataset</h2>
+                                <a href="https://ubc-provenance.github.io/PIDSMaker/">
+                                    <h2><span class="course-nb">1</span> PIDSMaker</h2>
                                     <div class="centered-img">
-                                        <img src="/courses/phishgnn/img/main.png"></img>    
+                                        <img src="/courses/phishgnn/img/pidsmaker.png"></img>    
                                     </div>
-                                </Link>
+                                </a>
                             </div>
                         </div>
+                        
                         
 
                         <div class="col-md-6">
@@ -119,12 +120,12 @@ class Courses extends Component {
                     <div className="row animatable fadeInUp">    
                         <div class="col-md-6">
                             <div class="courses-block accent-box">
-                                <a href="https://ubc-provenance.github.io/PIDSMaker/">
-                                    <h2><span class="course-nb">3</span> PIDSMaker</h2>
+                                <Link to={`/phishgnn`}>
+                                    <h2><span class="course-nb">3</span> PhishGNN-22 dataset</h2>
                                     <div class="centered-img">
-                                        <img src="/courses/phishgnn/img/pidsmaker.png"></img>    
+                                        <img src="/courses/phishgnn/img/main.png"></img>    
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

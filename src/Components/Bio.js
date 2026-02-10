@@ -18,8 +18,8 @@ class Bio extends Component {
                     <div className="row animatable fadeInUp">
                         <div className="col-md-12">
 
-                        I am currently an Applied Scientist Intern within the <span className='accent-color'>Security Analytics and AI Research (SAAR)</span> team at <span className='accent-color'><a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a></span> in New York, and a PhD graduate from <span className='accent-color'><a href="https://www.universite-paris-saclay.fr/">Université Paris-Saclay</a></span>.
-                        My work spans at the intersection of AI and security.
+                        My postdoctoral research at UBC focuses on building a foundation model for security applications.
+                        Previously, I worked as an Applied Scientist Intern within the <span className='accent-color'>Security Analytics and AI Research (SAAR)</span> team at <span className='accent-color'><a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a></span> in New York, focusing on multi-agent system prompt security.
                         My PhD research focused on exploiting the full potential of AI for detecting advanced attacks such as APTs at the network and system levels through self-supervised graph learning.
 
                         <br/><br/>
