@@ -27,7 +27,7 @@ const timeline = [
     url: 'https://www.universite-paris-saclay.fr/',
   },
   {
-    role: "Master's (Diplôme d'Ingénieur) in CS",
+    role: "Master's in Computer Science",
     org: 'EPITA',
     year: '2019-2022',
     location: 'Paris, France',
