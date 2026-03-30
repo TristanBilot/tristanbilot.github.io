@@ -14,7 +14,7 @@ class Articles extends Component {
               <div className="block">
                 <h1 className="title animate-letters-accent animatable fadeInUp">Medium articles</h1>
                 <blockquote class="blockquote">
-                  <p className='span-title-comment'>I use to write <span className='accent-color'> Medium articles</span> on various engineering/programming topics, to <span className='accent-color'>help the community</span> on issues I encountered over the last years.</p>
+                  <p className='span-title-comment'>I write <span className='accent-color'> Medium articles</span> on various engineering/programming topics, to <span className='accent-color'>help the community</span> on issues I encountered over the last years.</p>
                 </blockquote>
                 <div className="very-small-vertical-space"></div>
 

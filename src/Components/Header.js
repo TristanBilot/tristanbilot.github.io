@@ -24,7 +24,7 @@ const Header = () => {
         <div className="hero-icons" aria-label="profiles and links">
           <a href="/public_content/cv.pdf" className='cv-logo' target="_blank" rel="noopener noreferrer" title="CV" aria-label="CV">CV</a>
 
-          <a href="mailto:tristan.bilot@universite-paris-saclay.fr" target="_blank" rel="noopener noreferrer" title="Email" aria-label="Email">
+          <a href="mailto:tbilot@cs.ubc.ca" target="_blank" rel="noopener noreferrer" title="Email" aria-label="Email">
             {/* Email */}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none"
               stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
