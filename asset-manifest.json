@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.38902390.chunk.css",
-    "main.js": "/static/js/main.c3f41c95.chunk.js",
-    "main.js.map": "/static/js/main.c3f41c95.chunk.js.map",
+    "main.js": "/static/js/main.5eab24e9.chunk.js",
+    "main.js.map": "/static/js/main.5eab24e9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.daf7bfd2.js",
     "runtime-main.js.map": "/static/js/runtime-main.daf7bfd2.js.map",
     "static/css/2.9c539863.chunk.css": "/static/css/2.9c539863.chunk.css",
@@ -29,14 +29,15 @@
     "static/media/nn2.f3462c15.svg": "/static/media/nn2.f3462c15.svg",
     "static/media/orthrus.a151cb6e.png": "/static/media/orthrus.a151cb6e.png",
     "static/media/phishgnn_figure.c0457c7b.png": "/static/media/phishgnn_figure.c0457c7b.png",
+    "static/media/pidsmaker.a45991e4.png": "/static/media/pidsmaker.a45991e4.png",
     "static/media/tsp.49afb1b6.png": "/static/media/tsp.49afb1b6.png",
-    "static/media/velox.711190b2.png": "/static/media/velox.711190b2.png"
+    "static/media/velox.a4125210.png": "/static/media/velox.a4125210.png"
   },
   "entrypoints": [
     "static/js/runtime-main.daf7bfd2.js",
     "static/css/2.9c539863.chunk.css",
     "static/js/2.1f2763cc.chunk.js",
     "static/css/main.38902390.chunk.css",
-    "static/js/main.c3f41c95.chunk.js"
+    "static/js/main.5eab24e9.chunk.js"
   ]
 }
