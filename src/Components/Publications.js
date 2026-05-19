@@ -6,6 +6,7 @@ import csnet from '../resources/publications/csnet.png';
 import feae from '../resources/publications/feae.png';
 import orthrus from '../resources/publications/orthrus.png';
 import velox from '../resources/publications/velox.png';
+import pidsmaker from '../resources/publications/pidsmaker.png';
 import '../Styles/publications.sass';
 
 class Publications extends Component {
@@ -20,13 +21,32 @@ class Publications extends Component {
             <div className="col-sm-6 col-12">
                 <div className="block">
                     <div className="vertical-space-only-mobile"></div>
-                    <h1 className="title  fadeInUp">Publications</h1>
+                    <h1 className="title  fadeInUp">Selected Publications</h1>
                     <blockquote class="blockquote">
                         <p className='span-title-comment'>Publications related to my <span className='accent-color'>research work</span>.</p>
                     </blockquote>
                     <div className="very-small-vertical-space"></div>
                     <div className="row animatable fadeInUp">
                         <div className="col-md-12">
+
+                        <div className="publication-card animatable fadeInUp accent-box d-flex" style={{ display: 'flex' }}>
+                            <div className="text-section" style={{ flex: 1 }}>
+                              <h6>KDD 2026 (Datasets & Benchmarks)</h6>
+                              <p>
+                                <p className="card-title">
+                                  PIDSMaker: Building and Evaluating Provenance-based Intrusion Detection Systems
+                                </p>
+                              </p>
+                              <p><u>Tristan Bilot</u>, Baoxiang Jiang, Thomas Pasquier</p>
+                              <br />
+                              <a href="https://arxiv.org/pdf/2601.22983" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Paper</a> 
+                              <a href="https://github.com/ubc-provenance/PIDSMaker" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                            <div className="image-section d-flex align-items-center justify-content-center" style={{ flex: 1 }}>
+                              <img className="publication-card__image" src={pidsmaker} alt="PIDSMaker" />
+                            </div>
+                          </div>
+                          <div className="very-small-vertical-space"></div>
 
                         <div className="publication-card animatable fadeInUp accent-box d-flex" style={{ display: 'flex' }}>
                             <div className="text-section" style={{ flex: 1 }}>
@@ -105,7 +125,7 @@ class Publications extends Component {
                           </div>
                           <div className="very-small-vertical-space"></div>
 
-                          <div className="publication-card animatable fadeInUp accent-box d-flex" style={{ display: 'flex' }}>
+                          {/* <div className="publication-card animatable fadeInUp accent-box d-flex" style={{ display: 'flex' }}>
                             <div className="text-section" style={{ flex: 1 }}>
                               <h6>CSNet (2023)</h6>
                               <p>
@@ -159,7 +179,7 @@ class Publications extends Component {
                               <img className="publication-card__image" src={kernel} alt="PhishGNN" />
                             </div>
                           </div>
-                          <div className="very-small-vertical-space"></div>
+                          <div className="very-small-vertical-space"></div> */}
 
                         </div>
 
