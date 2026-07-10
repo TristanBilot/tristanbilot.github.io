@@ -9,8 +9,12 @@ const Header = () => {
     <div id="intro" className="header">
       <div className="hero-inner">
         {/* avatar */}
-        <div class="portrait" style={{ backgroundImage: "url(" + me + ")" }}>
-                    </div>
+        <div
+          className="portrait"
+          role="img"
+          aria-label="Portrait of Tristan Bilot"
+          style={{ backgroundImage: "url(" + me + ")" }}
+        ></div>
 
         {/* name */}
         <span className="title">Tristan Bilot</span>
@@ -57,9 +61,9 @@ const Header = () => {
             </svg>
           </a>
 
-          <a href="https://tristanbilot.medium.com" target="_blank" rel="noopener noreferrer" title="BlueSky" aria-label="BlueSky">
-            {/* BlueSky */}
-            <i class="fab fa-medium big-icon"></i>
+          <a href="https://tristanbilot.medium.com" target="_blank" rel="noopener noreferrer" title="Medium" aria-label="Medium">
+            {/* Medium */}
+            <i className="fab fa-medium big-icon"></i>
           </a>
 
           <a href="https://www.linkedin.com/in/tristan-bilot/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
@@ -85,9 +89,9 @@ const Header = () => {
           </a>
         </div> */}
       </div>
-      <div class="background">
-          <div class="toggle-body">
-            <div id="toggle-btn" class="toggle-btn"></div>
+      <div className="background">
+          <div className="toggle-body">
+            <div id="toggle-btn" className="toggle-btn"></div>
           </div>
         </div>
     </div>

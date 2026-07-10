@@ -13,22 +13,22 @@ class Articles extends Component {
               <div className="small-vertical-space"></div>
               <div className="block">
                 <h1 className="title animate-letters-accent animatable fadeInUp">Medium articles</h1>
-                <blockquote class="blockquote">
+                <blockquote className="blockquote">
                   <p className='span-title-comment'>I write <span className='accent-color'> Medium articles</span> on various engineering/programming topics, to <span className='accent-color'>help the community</span> on issues I encountered over the last years.</p>
                 </blockquote>
                 <div className="very-small-vertical-space"></div>
 
                 <div className="row animatable fadeInUp">
                   <div className="col-md-12">
-                    <section id="blog" class="accent-box">
-                      <ul class="blog__slider">
+                    <section id="blog" className="accent-box">
+                      <ul className="blog__slider">
                         {/* posts */}
                       </ul>
-                      <ul class="blog__counter">
+                      <ul className="blog__counter">
                         {/* counters */}
                       </ul>
                     </section>
-                    <div class="more-articles animatable fadeInUp">
+                    <div className="more-articles animatable fadeInUp">
                       <a className='accent-underline' href="https://tristanbilot.medium.com" alt="link to my medium page" target="_blank" rel="noopener noreferrer"> All articles...</a>
                     </div>
                   </div>

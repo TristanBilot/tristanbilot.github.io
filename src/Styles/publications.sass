@@ -9,20 +9,55 @@
     margin-left: auto
     margin-right: auto
     font-size: 15px
+    display: flex
+    border-radius: 10px
+    transition: transform 0.18s ease-in-out, box-shadow 0.18s ease-in-out
+
+    &:hover
+        transform: translateY(-2px)
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12)
 
     .text-section
+        flex: 1
         padding: 0px 10px 10px 10px
+
+    .image-section
+        flex: 1
 
     .card-title
         font-size: 18px
         font-weight: 600
         font-style: italic
-        
+        margin-bottom: 8px
+
+    &__venue
+        margin-bottom: 4px
+        @include themify($themes)
+            color: themed('text-color-secondary')
+
+    &__award
+        margin-bottom: 4px
+        @include themify($themes)
+            color: themed('accent-color')
+
+    &__authors
+        margin-bottom: 12px
+        line-height: 1.5
+
+    &__note
+        @include themify($themes)
+            color: themed('text-color-secondary')
+
+    &__links a
+        display: inline-block
+        margin-right: 14px
+        white-space: nowrap
+
     &__image
         margin-top: 10px
-        // width: 90%
         max-height: 250px
         max-width: 400px
+        border-radius: 6px
 
     a
         margin-right: 10px
@@ -39,3 +74,28 @@
 
         &__image
             width: 100%
+
+.publications-toggle
+    display: flex
+    justify-content: center
+    margin-top: 6px
+
+    button
+        cursor: pointer
+        font-size: 15px
+        padding: 8px 18px
+        border-radius: 999px
+        background: transparent
+        transition: color 0.18s ease-in-out, border-color 0.18s ease-in-out
+        @include themify($themes)
+            color: themed('text-color-secondary')
+            border: 1px solid themed('text-color-secondary')
+
+        i
+            margin-left: 6px
+            font-size: 12px
+
+        &:hover
+            @include themify($themes)
+                color: themed('accent-color')
+                border-color: themed('accent-color')

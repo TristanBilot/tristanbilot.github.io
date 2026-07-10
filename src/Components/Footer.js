@@ -7,7 +7,7 @@ class Footer extends Component {
     return (
       <div className="header">
         <div className="vertical-space"></div>
-        <div class="footer-card">
+        <div className="footer-card">
           <h2>
             <span className="footer-msg"><span className="accent-color"> Developed</span> with ❤️ in Paris</span>
           </h2>

@@ -29,9 +29,9 @@ class Bio extends Component {
       <br/><br/>
 
                         Alongside my research, I enjoy building frameworks that simplify experimentation for the community and my research teams, and that promote more consistent evaluation across publications. 
-                        I developed <span className='accent-color'><a href="https://github.com/ubc-provenance/PIDSMaker">PIDSMaker</a></span>, a machine learning framework for designing provenance-based intrusion detection systems (PIDSs) that integrates many state-of-the-art approaches. 
-                        I also created <span className='accent-color'><a href="https://github.com/mlx-graphs/mlx-graphs">mlx-graphs</a></span> for running GPU-acceleated GNNs on Apple Silicon, and <span className='accent-color'><a href="https://github.com/TristanBilot/mlx-benchmark">mlx-benchmark</a></span> to compare the performance of Apple chips and NVIDIA GPUs across PyTorch and Apple MLX operations. 
-                        I am currently working on a framework for evaluating multi-agent system security at AWS.
+                        I developed <span className='accent-color'><a href="https://github.com/ubc-provenance/PIDSMaker">PIDSMaker</a></span>, a machine learning framework for designing provenance-based intrusion detection systems (PIDSs) that integrates many state-of-the-art approaches.
+                        I also created <span className='accent-color'><a href="https://github.com/mlx-graphs/mlx-graphs">mlx-graphs</a></span> for running GPU-accelerated GNNs on Apple Silicon, and <span className='accent-color'><a href="https://github.com/TristanBilot/mlx-benchmark">mlx-benchmark</a></span> to compare the performance of Apple chips and NVIDIA GPUs across PyTorch and Apple MLX operations.
+                        At AWS, I built a framework for evaluating the security of multi-agent systems.
                         </div>
 
                     </div>

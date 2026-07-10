@@ -91,23 +91,23 @@ const Course = (props) => {
 
     function viewCounts() {
       if (counter == null)
-        return <div class="counter"></div>
-      return <div class="counter">
-          <i class="fas fa-eye"></i> {counter} views
+        return <div className="counter"></div>
+      return <div className="counter">
+          <i className="fas fa-eye"></i> {counter} views
         </div>
     }
 
     return (
-      <div class="course-background">
-        <div class="container course-container">
-          <div class="row">
-            <div class="col-sm-7 mx-auto">
-              <div class="course-buttons">
+      <div className="course-background">
+        <div className="container course-container">
+          <div className="row">
+            <div className="col-sm-7 mx-auto">
+              <div className="course-buttons">
                 {buttons()}
               </div>
               {viewCounts()}
               <Markdown content={markdown} />
-              {/* <div class="course-buttons mt-4 mb-5">
+              {/* <div className="course-buttons mt-4 mb-5">
                 {buttons()}
               </div> */}
             </div>
