@@ -71,22 +71,44 @@ function shortenText(text,startingPoint ,maxLength) {
 function getPostsSliceFromIndex(posts, index, nbPostsPerSlide) {
    return posts.slice(index * nbPostsPerSlide, (index + 1) * nbPostsPerSlide)
 }
+
+/* Medium's feed ends every excerpt with "Continue reading on <publication> »". */
+function stripFeedBoilerplate(text) {
+   return text.replace(/\s*Continue reading on .*$/s, '').trim()
+}
+/* "2024-02-02 09:31:07" -> "Feb 2024". Falls back to the raw date on failure. */
+function formatDate(pubDate) {
+   const parsed = new Date(String(pubDate).replace(' ', 'T'))
+   if (isNaN(parsed)) return shortenText(pubDate, 0, 10)
+   return parsed.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+}
+
 function formatHTMLFromPost(item) {
-   const img = (item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1];
+   // Not every Medium post opens with an image, so this match can come back null.
+   const match = String(item['description']).match(/<img[^>]+src="([^">]+)"/)
+   const img = match ? match[1] : null
+
+   const figure = img
+      ? `<div class="article-card__figure"><img src="${img}" alt="" loading="lazy"></div>`
+      : ''
+
+   // Strip the boilerplate before truncating, or a cut-off copy of it survives.
+   const body = stripFeedBoilerplate(toText(item.content))
+   const excerpt = shortenText(body, 60, 300).trim()
+   const ellipsis = excerpt.length < body.length ? '…' : ''
 
    return `
-   <a class="article-link" href="${item.link}">
-      <div class="publication-card animatable fadeInUp d-flex">
-         <div class="text-section" style="flex: 1;">
-            <h6>${shortenText(item.pubDate, 0, 10)}</h6>
-            <h5>${item.title}</h5>
-            <p>${shortenText(toText(item.content), 60, 300) + '...'}</p>
+   <li class="article-item">
+      <a class="article-link" href="${item.link}" target="_blank" rel="noopener noreferrer">
+         <div class="article-card animatable fadeInUp">
+            <div class="article-card__body">
+               <span class="article-card__date">${formatDate(item.pubDate)}</span>
+               <h4 class="article-card__title">${item.title}</h4>
+               <p class="article-card__excerpt">${excerpt}${ellipsis}</p>
+            </div>
+            ${figure}
          </div>
-         <div class="image-section d-flex align-items-center justify-content-center" style="flex: 1;">
-            <img class="publication-card__image small-img" src="${img}" alt="Article image">
-         </div>
-      </div>
-      <hr/>
-   </a>
+      </a>
+   </li>
    `;
 }

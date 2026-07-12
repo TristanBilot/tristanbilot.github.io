@@ -45,16 +45,23 @@
 }
 
   .animatable {
-    
+
     /* initially hide animatable objects */
     visibility: hidden;
-    
+
     /* initially pause animatable objects their animations */
-    -webkit-animation-play-state: paused;   
-    -moz-animation-play-state: paused;     
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
     -ms-animation-play-state: paused;
-    -o-animation-play-state: paused;   
-    animation-play-state: paused; 
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  /* Never leave content stuck at visibility:hidden for a reader who opted out. */
+  @media (prefers-reduced-motion: reduce) {
+    .animatable {
+      visibility: visible;
+    }
   }
   
   /* show objects being animated */
@@ -67,12 +74,14 @@
     -o-animation-fill-mode: both;
     animation-fill-mode: both;
     
-    -webkit-animation-duration: 1.4s;
-    -moz-animation-duration: 1.4s;
-    -ms-animation-duration: 1.4s;
-    -o-animation-duration: 1.4s;
-    animation-duration: 1.4s;
-  
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -ms-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+
+    animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+
     -webkit-animation-play-state: running;
     -moz-animation-play-state: running;
     -ms-animation-play-state: running;
