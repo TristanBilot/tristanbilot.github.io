@@ -34,20 +34,4 @@
       // Private browsing: the theme still switches, it just won't be remembered.
     }
   });
-
-  // Follow the OS only while the visitor has not made an explicit choice.
-  if (window.matchMedia) {
-    var query = window.matchMedia('(prefers-color-scheme: dark)');
-    var onChange = function (event) {
-      try {
-        if (localStorage.getItem(STORAGE_KEY)) return;
-      } catch (e) {
-        // Storage unreadable: fall through and follow the OS.
-      }
-      apply(event.matches ? 'dark' : 'light');
-    };
-
-    if (query.addEventListener) query.addEventListener('change', onChange);
-    else if (query.addListener) query.addListener(onChange);
-  }
 })();
