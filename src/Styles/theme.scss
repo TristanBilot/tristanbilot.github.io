@@ -1,5 +1,10 @@
 /*
- * Implementation of themes
+ * Design tokens + theming.
+ *
+ * Every colour used by a component comes from the `$themes` map below, read via
+ * `themed('key')` inside an `@include themify($themes)` block. The theme class
+ * (`theme-light` / `theme-dark`) lives on <html> and is set by an inline script
+ * in index.html before first paint, so there is no flash of the wrong theme.
  */
 
 @function themed($key) {
@@ -20,64 +25,121 @@
   }
 }
 
-$switch-transition-delay: 1.5s;
+/* ---------------------------------------------------------------- type --- */
 
-$background: #2A2730;//#1D1D1D ;
-$background-secondary: #57545E; //#2C2C2C;
-$text-color: #fff;
-$text-color-secondary: #ccc;
-$accent-color: #FFB2FD;
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-serif: 'Source Serif 4', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+$font-mono: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace;
+
+/* ------------------------------------------------------------- metrics --- */
+
+$navbar-height: 56px;
+// One column for everything: prose, cards, and the post grid share this width
+// so the page reads as a single flush measure rather than a wide grid with
+// narrow text hugging its left edge.
+$content-width: 720px;
+$measure: $content-width; // prose fills the column
+$gutter: 24px;
+// Bands (nav, sections, footer) span the content width plus gutters so their
+// inner content lines up on one left edge.
+$page: $content-width + $gutter * 2;
+
+$radius-sm: 6px;
+$radius: 10px;
+$radius-pill: 999px;
+
+$section-gap: 5.5rem;
+$ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+/* Kept short: the theme swap should feel instant, not like a slow dissolve. */
+$switch-transition-delay: 0.2s;
+
+/* -------------------------------------------------------------- colour --- */
+
+// Legacy top-level vars, still referenced by a few older stylesheets.
+$background: #fbfaf9;
+$background-secondary: #f1efeb;
+$text-color: #1b1a19;
+$text-color-secondary: #5c5852;
+$accent-color: #2f5d8c;
 $code-block-background: #f6f8fa;
 
-$orange: #F69488;
-$blue-light: #91CBD7;
-$blue: #4E9BB9;
-$yellow: #FFD086;
-$red: #ED6570;
+$orange: #f69488;
+$blue-light: #91cbd7;
+$blue: #4e9bb9;
+$yellow: #ffd086;
+$red: #ed6570;
 
 $themes: (
-  dark: (
-    background: #2A2730,
-    background-secondary: #57545E,
-    text-color: #fff,
-    text-color-secondary: #ccc,
-    accent-color: #FFB2FD,
-    course-background: $background,
-    code-block-background: $background-secondary,
-    code-block-builtin: #03DAC6,
-    code-block-comment: #ccc,
-  ),
   light: (
-    background: #f6f9fc,
-    background-secondary: #eee,
-    text-color: #2A2730,
-    text-color-secondary: #888,
-    // accent-color: #B8A9FF,
-    accent-color: #55F,
-    course-background: #fff,
-    code-block-background: #f6f8fa,
-    code-block-builtin: #6200EE,
-    code-block-comment: #888,
+    // Warm off-white "paper" rather than a cool blue-grey; reads as print.
+    background: #fbfaf9,
+    background-secondary: #f1efeb,
+    surface: #ffffff,
+    surface-subtle: #f4f2ee,
+    border: #e6e2db,
+    divider: #ece8e1,
+    text-color: #1b1a19,
+    // Long-form reading sits between the heading black and the muted greys.
+    text-body: #38352f,
+    text-color-secondary: #5c5852,
+    // Muted still clears 4.5:1 on both the page and the card: it carries small
+    // 13px text (dates, venues, the footer), not just decoration.
+    text-color-muted: #767169,
+    // Muted ink blue. Change these two lines to restyle the whole site.
+    accent-color: #2f5d8c,
+    accent-strong: #21456a,
+    accent-soft: rgba(47, 93, 140, 0.1),
+    accent-contrast: #ffffff,
+    nav-bg: rgba(251, 250, 249, 0.82),
+    course-background: #ffffff,
+    code-block-background: #f4f2ee,
+    code-block-builtin: #6200ee,
+    code-block-comment: #8a857d,
+    card-background: #ffffff,
+    card-border: #e6e2db,
+    card-shadow: rgba(28, 27, 25, 0.07),
+  ),
+  dark: (
+    background: #17161a,
+    background-secondary: #232228,
+    surface: #1d1c21,
+    surface-subtle: #26252b,
+    border: rgba(255, 255, 255, 0.1),
+    divider: rgba(255, 255, 255, 0.07),
+    text-color: #e9e8e6,
+    text-body: #c9c6c1,
+    text-color-secondary: #a5a29c,
+    text-color-muted: #8a8781,
+    accent-color: #8fb8dd,
+    accent-strong: #a9cbe9,
+    accent-soft: rgba(143, 184, 221, 0.14),
+    accent-contrast: #14131a,
+    nav-bg: rgba(23, 22, 26, 0.82),
+    course-background: #17161a,
+    code-block-background: #232228,
+    code-block-builtin: #03dac6,
+    code-block-comment: #a5a29c,
+    card-background: #1d1c21,
+    card-border: rgba(255, 255, 255, 0.1),
+    card-shadow: rgba(0, 0, 0, 0.4),
   ),
 );
 
-* {
-    transition: color $switch-transition-delay ease-in-out; // smooth theme change
-    transition: background 0s ease-in-out;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
-a {
-    color: inherit;
-    text-decoration: none;
-}
-a:hover {
-  @include themify($themes) {
-    color: themed('accent-color');
+/* -------------------------------------------------------------- shared --- */
+
+// A quiet ring for keyboard users. Mouse clicks never trigger :focus-visible.
+// Base element rules live in global.sass so they are emitted once, not once
+// per stylesheet that needs these tokens.
+@mixin focus-ring {
+  &:focus {
+    outline: none;
   }
-}
-ul {
-   list-style: none;
-}
-h2 {
-  font-weight: 400;
+  &:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+    @include themify($themes) {
+      outline-color: themed('accent-color');
+    }
+  }
 }

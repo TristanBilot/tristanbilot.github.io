@@ -1,93 +1,91 @@
 @import 'theme.scss'
 
-.background-section
-  .timeline
-    position: relative
-    padding-left: 0
-    list-style: none
+$logo-size: 44px
 
-    &::before
-      content: ''
-      position: absolute
-      left: 22px
-      top: 0
-      bottom: 0
-      width: 2px
-      @include themify($themes)
-        background: themed('accent-color')
-      opacity: 0.3
+.timeline
+  position: relative
 
-  .timeline-item
-    display: flex
-    align-items: flex-start
-    margin-bottom: 28px
-    position: relative
+  // The rail runs through the centre of the logos, stopping at the first and
+  // last one rather than overshooting the list.
+  &::before
+    content: ''
+    position: absolute
+    left: calc(#{$logo-size} / 2 - 1px)
+    top: $logo-size
+    bottom: $logo-size
+    width: 1px
 
-    &:last-child
-      margin-bottom: 0
+    @include themify($themes)
+      background: themed('border')
 
-  .timeline-logo
-    width: 46px
-    height: 46px
-    min-width: 46px
-    border-radius: 50%
-    display: flex
-    align-items: center
-    justify-content: center
-    background: white
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
-    z-index: 1
-    overflow: hidden
+.timeline-item
+  display: flex
+  align-items: flex-start
+  position: relative
+  padding: 0.55rem 0
 
-    img
-      width: 30px
-      height: 30px
-      object-fit: contain
+  & + .timeline-item
+    margin-top: 0.4rem
 
-  .timeline-content
-    margin-left: 20px
-    padding-top: 2px
+.timeline-logo
+  width: $logo-size
+  height: $logo-size
+  min-width: $logo-size
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #fff
+  overflow: hidden
+  z-index: 1
 
-    .timeline-role
-      font-size: 16px
-      font-weight: 600
-      @include themify($themes)
-        color: themed('text-color')
+  @include themify($themes)
+    box-shadow: 0 0 0 1px themed('border')
 
-    .timeline-org
-      font-size: 15px
-      font-weight: 400
+  img
+    width: 26px
+    height: 26px
+    object-fit: contain
+
+.timeline-content
+  margin-left: 1.125rem
+  padding-top: 0.1rem
+
+.timeline-role
+  font-size: 1rem
+  font-weight: 600
+  line-height: 1.4
+
+  @include themify($themes)
+    color: themed('text-color')
+
+.timeline-org
+  font-size: 0.9375rem
+  line-height: 1.5
+
+  a
+    transition: color 0.15s $ease
+
+    @include themify($themes)
+      color: themed('text-color-secondary')
+
+    &:hover
       @include themify($themes)
         color: themed('accent-color')
 
-    .timeline-details
-      font-size: 14px
-      margin-top: 2px
-      @include themify($themes)
-        color: themed('text-color-secondary')
+.timeline-details
+  font-size: 0.8438rem
+  margin-top: 0.1rem
+
+  @include themify($themes)
+    color: themed('text-color-muted')
 
 @media (max-width: 800px)
-  .background-section
-    .timeline-item
-      margin-bottom: 22px
+  .timeline-content
+    margin-left: 0.9rem
 
-    .timeline-logo
-      width: 40px
-      height: 40px
-      min-width: 40px
+  .timeline-role
+    font-size: 0.9375rem
 
-      img
-        width: 26px
-        height: 26px
-
-    .timeline-content
-      margin-left: 14px
-
-      .timeline-role
-        font-size: 15px
-
-      .timeline-org
-        font-size: 14px
-
-      .timeline-details
-        font-size: 13px
+  .timeline-org
+    font-size: 0.875rem

@@ -1,30 +1,59 @@
-const sections = document.querySelectorAll(".header");
-const navLi = document.querySelectorAll("nav .container ul li");
+/*
+ * Highlights the nav item matching the section currently in view.
+ *
+ * The sections and the nav are both rendered by React, so everything is looked
+ * up lazily on the first scroll rather than at parse time. Work is throttled
+ * onto an animation frame: the previous version ran a full layout read on every
+ * scroll event.
+ */
+(function () {
+  var NAV_OFFSET = 80;
+  var ticking = false;
 
-window.onscroll = () => {
-  var current = "";
+  function update() {
+    ticking = false;
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 60) {
-      current = section.getAttribute("id"); }
-  });
+    var sections = document.querySelectorAll('.header[id]');
+    var navItems = document.querySelectorAll('#navbar-main .navbar-nav li');
+    if (!sections.length || !navItems.length) return;
 
-  navLi.forEach((li) => {
-    li.classList.remove("active");
-    if (li.classList.contains(current)) {
-      li.classList.add("active");
+    var current = '';
+    for (var i = 0; i < sections.length; i++) {
+      if (window.scrollY >= sections[i].offsetTop - NAV_OFFSET) {
+        current = sections[i].getAttribute('id');
+      }
     }
-  });
-};
 
-// collapse navbar on navbar link click and click outside
+    // Near the bottom nothing else can scroll into view, so pin the last section.
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+      current = sections[sections.length - 1].getAttribute('id');
+    }
+
+    navItems.forEach(function (li) {
+      li.classList.toggle('active', li.classList.contains(current));
+    });
+  }
+
+  window.addEventListener(
+    'scroll',
+    function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    },
+    { passive: true }
+  );
+
+  window.addEventListener('load', update);
+})();
+
+/* Collapse the mobile menu when tapping a link or anywhere outside it. */
 $(document).ready(function () {
   $(document).click(function (event) {
-      var clickover = $(event.target);
-      var _opened = $(".navbar-collapse").hasClass("show");
-      if (_opened === true && !clickover.hasClass("navbar-toggler")) {
-          $(".navbar-toggler").click();
-      }
+    var target = $(event.target);
+    var opened = $('.navbar-collapse').hasClass('show');
+    if (opened && !target.hasClass('navbar-toggler')) {
+      $('.navbar-toggler').click();
+    }
   });
 });

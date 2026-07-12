@@ -1,6 +1,7 @@
 import Header from './Components/Header'
 import News from './Components/News'
 import Bio from './Components/Bio'
+import Collaborations from './Components/Collaborations'
 import Background from './Components/Background'
 import BackgroundSection from './Components/BackgroundSection'
 import Competences from './Components/Competences'
@@ -16,6 +17,7 @@ import Knapsack from './Components/projects/GeneticKnapsack'
 import KnapsackScript from './Components/projects/GeneticKnapsackScript'
 import NavBar from './Components/NavBar'
 import Publications from './Components/Publications'
+import Talks from './Components/Talks'
 import Courses from './Components/Courses'
 import Course from './Components/courses/Course'
 
@@ -32,6 +34,7 @@ import {
 // } from "react-router-dom";
 
 import './App.css';
+import './Styles/global.sass';
 import '@fortawesome/fontawesome-free/js/brands'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/fontawesome'
@@ -76,7 +79,7 @@ function CourseRoutes() {
     if (i == courses.length - 1) {next_course = no_course} else {next_course = courses[i+1]}
 
     jsx_routes.push(
-      <Route path={course["url"]}>
+      <Route key={course["url"]} path={course["url"]}>
         <NavBar />
         <Course 
           course_path={course["course_path"]}
@@ -114,14 +117,17 @@ function App() {
           {CourseRoutes()}
 
           <Route path='/'>
+            <a className="skip-link" href="#bio">Skip to content</a>
             <NavBar />
             <Header />
             <BackgroundSection />
             <Bio />
             <News />
             <Publications />
+            <Talks />
+            <Collaborations />
             <Courses />
-            <Articles />
+            {/* <Articles /> */}
             {/* <Competences /> */}
             {/* <Interests /> */}
             {/* <Projects /> */}

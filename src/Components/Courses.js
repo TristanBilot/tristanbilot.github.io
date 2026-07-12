@@ -1,144 +1,81 @@
-import React, { Component } from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import '../Styles/projects.scss';
-import '../Styles/visualProjects.sass';
+import Section from './Section';
+import '../Styles/posts.sass';
 
-class Courses extends Component {
+// `to` uses the in-app router; `href` leaves the site.
+const SERIES = [
+  {
+    title: 'Deep Learning from scratch',
+    posts: [
+      { to: '/prerequisites', title: 'Prerequisites', image: '/courses/prerequisites/img/main.jpg' },
+      { to: '/chain-rule', title: 'Chain rule and computation graphs', image: '/courses/chain-rule/img/g6.jpg' },
+      { to: '/autodiff', title: 'Automatic differentiation engine from scratch', image: '/courses/autodiff/img/main.jpg' },
+      { to: '/optimization', title: 'Optimization and training', image: '/courses/optimization/img/main.jpg' },
+      { to: '/xor-sine', title: 'XOR and sine problems', image: '/courses/xor-sine/img/g1.jpg' },
+    ],
+  },
+  {
+    title: 'Project websites',
+    posts: [
+      {
+        href: 'https://ubc-provenance.github.io/PIDSMaker/',
+        title: 'PIDSMaker',
+        image: '/courses/phishgnn/img/pidsmaker.png',
+      },
+      {
+        href: 'https://mlx-graphs.github.io/mlx-graphs/',
+        title: 'mlx-graphs',
+        image: '/courses/phishgnn/img/mlx-graphs.svg',
+      },
+      { to: '/phishgnn', title: 'PhishGNN-22 dataset', image: '/courses/phishgnn/img/main.png' },
+    ],
+  },
+];
 
-  render() {
-      return (
-        <div id="courses" className="header">
-            <div className="container-fluid position-relative">
-            <div className="row">
-                <div className="small-vertical-space"></div>
-                <div className="col-sm-3 col-0"></div>
-                <div className="col-sm-6 col-12">
-                <h1 className="title  fadeInUp">Blog Posts</h1>
-                <blockquote className="blockquote">
-                    <p className='span-title-comment'>These are some notes that may be helpful to learn the <span className='accent-color'>theory</span> and the <span className='accent-color'>fundamentals</span> of Deep Learning. I also explain how to implement a simple <span className='accent-color'> autodiff engine from scratch</span> using only Python, numpy and maths.</p>
-                </blockquote>
-                
-                <div className="container-fluid position-relative">
-                    <div className="animatable fadeInUp">
-                        <h3 className="course-series-title">Deep Learning from scratch series</h3>
-                        <hr/>
-                    </div>
+const PostCard = ({ post, index }) => {
+  const inner = (
+    <>
+      <div className="post-card__thumb">
+        <img src={post.image} alt="" loading="lazy" />
+      </div>
+      <div className="post-card__footer">
+        <span className="post-card__nb" aria-hidden="true">
+          {index + 1}
+        </span>
+        <h4 className="post-card__title">{post.title}</h4>
+      </div>
+    </>
+  );
 
-                    <div className="row animatable fadeInUp">
-                        <div className="col-md-6">
-                            <div className="courses-block accent-box">
-                                <Link to={`/prerequisites`}>
-                                    <h2><span className="course-nb">1</span> Prerequisites</h2>
-                                    <div className="centered-img">
-                                        <img src="/courses/prerequisites/img/main.jpg"></img>    
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="courses-block accent-box">
-                                <Link to={`/chain-rule`}>
-                                    <h2><span className="course-nb">2</span>Chain rule and computation graphs</h2>
-                                    <div className="centered-img">
-                                        <img src="/courses/chain-rule/img/g6.jpg" className="course-img"></img>
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+  return post.to ? (
+    <Link className="post-card card-surface" to={post.to}>
+      {inner}
+    </Link>
+  ) : (
+    <a className="post-card card-surface" href={post.href} target="_blank" rel="noopener noreferrer">
+      {inner}
+    </a>
+  );
+};
 
-                    <div className="row animatable fadeInUp">
-                        <div className="col-md-6">
-                            <div className="courses-block accent-box">
-                                <Link to={`/autodiff`}>
-                                    <h2><span className="course-nb">3</span>Automatic differentiation engine from scratch</h2>
-                                    <div className="centered-img">
-                                        <img src="/courses/autodiff/img/main.jpg" className="header-img"></img>
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="courses-block accent-box">
-                                <Link to={`/optimization`}>
-                                    <h2><span className="course-nb">4</span>Optimization and training</h2>
-                                    <div className="centered-img">
-                                        <img src="/courses/optimization/img/main.jpg" className="header-img"></img>
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row animatable fadeInUp">
-                        <div className="col-md-6">
-                            <div className="courses-block accent-box">
-                            <Link to={`/xor-sine`}>
-                                <h2><span className="course-nb">5</span>XOR and sine problems</h2>
-                                <div className="centered-img">
-                                    <img src="/courses/xor-sine/img/g1.jpg"/>
-                                    </div>
-                            </Link>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className="container-fluid position-relative">
-                    <div className="animatable fadeInUp">
-                        <h3 className="course-series-title">Project Websites</h3>
-                        <hr/>
-                    </div>
-
-                    <div className="row animatable fadeInUp">
-                    <div className="col-md-6">
-                            <div className="courses-block accent-box">
-                                <a href="https://ubc-provenance.github.io/PIDSMaker/">
-                                    <h2><span className="course-nb">1</span> PIDSMaker</h2>
-                                    <div className="centered-img">
-                                        <img src="/courses/phishgnn/img/pidsmaker.png"></img>    
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        
-
-                        <div className="col-md-6">
-                            <div className="courses-block accent-box">
-                                <a href="https://mlx-graphs.github.io/mlx-graphs/">
-                                    <h2><span className="course-nb">2</span> mlx-graphs</h2>
-                                    <div className="centered-img">
-                                        <img src="/courses/phishgnn/img/mlx-graphs.svg"></img>    
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row animatable fadeInUp">    
-                        <div className="col-md-6">
-                            <div className="courses-block accent-box">
-                                <Link to={`/phishgnn`}>
-                                    <h2><span className="course-nb">3</span> PhishGNN-22 dataset</h2>
-                                    <div className="centered-img">
-                                        <img src="/courses/phishgnn/img/main.png"></img>    
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-sm-3 col-0"></div>
-            </div>
-            </div>
-
+const Courses = () => (
+  <Section
+    id="courses"
+    title="Blog Posts"
+    intro="Notes on the theory and fundamentals of deep learning, including how to implement a simple autodiff engine from scratch using only Python, numpy and maths."
+  >
+    {SERIES.map((series) => (
+      <div className="post-series" key={series.title}>
+        <h3 className="post-series__title animatable fadeInUp">{series.title}</h3>
+        <div className="post-grid animatable fadeInUp">
+          {series.posts.map((post, i) => (
+            <PostCard key={post.title} post={post} index={i} />
+          ))}
         </div>
       </div>
-      )
-  }
-}
+    ))}
+  </Section>
+);
 
 export default Courses;

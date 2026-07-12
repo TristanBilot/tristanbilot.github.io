@@ -1,47 +1,171 @@
 @import 'theme.scss'
 
-$navbar-height: 40px
-
-/* Reserve space so content isn't hidden behind fixed-top */
+/* Reserve space so content isn't hidden behind the fixed bar. */
 body
   padding-top: $navbar-height
 
-#navbar-main.navbar-light
-  background: #f6f9fc
-  box-shadow: 0 0.05rem 0.25rem 0 rgba(0, 0, 0, 0.11)
+#navbar-main
   height: $navbar-height
   display: flex
   align-items: center
+  padding: 0
+  backdrop-filter: saturate(180%) blur(12px)
+  -webkit-backdrop-filter: saturate(180%) blur(12px)
 
-#navbar-main .container
+  @include themify($themes)
+    background: themed('nav-bg')
+    border-bottom: 1px solid themed('divider')
+
+.navbar-inner
+  width: 100%
+  max-width: $page
+  margin: 0 auto
+  padding: 0 $gutter
   min-height: $navbar-height
   display: flex
   align-items: center
+  justify-content: space-between
+  gap: 16px
+
+.navbar-right
+  display: flex
+  align-items: center
+  gap: 4px
 
 .navbar-brand
+  font-family: $font-serif
+  font-size: 1.0625rem
   font-weight: 600
-  margin: 0 // avoid offset on mobile
+  letter-spacing: -0.01em
+  margin: 0
+  padding: 0
 
-/* Active link color */
-nav .container ul li.active a
-  color: rgba(0,0,0,.8) !important
+  @include themify($themes)
+    color: themed('text-color')
 
-/* Mobile menu: full-width panel under the bar with background */
-@media (max-width: 991.98px) // < lg
+  &:hover
+    @include themify($themes)
+      color: themed('accent-color')
+
+#navbar-main .navbar-nav
+  align-items: center
+  gap: 0
+  margin-bottom: 0
+
+#navbar-main .nav-item
+  position: relative
+
+#navbar-main .nav-link
+  position: relative
+  font-size: 0.8125rem
+  line-height: 1.25
+  padding: 6px 8px
+  border-radius: $radius-sm
+  transition: color 0.15s $ease
+
+  @include themify($themes)
+    color: themed('text-color-secondary')
+
+  /* Underline grows in on hover / when the section is in view. */
+  &::after
+    content: ''
+    position: absolute
+    left: 8px
+    right: 8px
+    bottom: 2px
+    height: 1.5px
+    border-radius: 2px
+    transform: scaleX(0)
+    transition: transform 0.2s $ease
+
+    @include themify($themes)
+      background: themed('accent-color')
+
+  &:hover
+    @include themify($themes)
+      color: themed('text-color')
+
+    &::after
+      transform: scaleX(1)
+
+nav .navbar-nav li.active .nav-link
+  @include themify($themes)
+    color: themed('text-color')
+
+  &::after
+    transform: scaleX(1)
+
+/* ------------------------------------------------------------- toggles --- */
+
+.theme-toggle
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 34px
+  height: 34px
+  margin-left: 6px
+  padding: 0
+  border: none
+  border-radius: $radius-sm
+  cursor: pointer
+  background: transparent
+  transition: background 0.15s $ease, color 0.15s $ease
+
+  @include themify($themes)
+    color: themed('text-color-secondary')
+
+  &:hover
+    @include themify($themes)
+      background: themed('surface-subtle')
+      color: themed('text-color')
+
+  svg
+    display: block
+
+/* Show the icon for the theme you would switch *to*. */
+.theme-light .theme-toggle__sun,
+.theme-dark .theme-toggle__moon
+  display: none
+
+#navbar-main .navbar-toggler
+  border: none
+  padding: 6px 8px
+  font-size: 1rem
+  background: transparent
+
+  @include themify($themes)
+    color: themed('text-color')
+
+/* Mobile: full-width panel dropping below the bar. */
+@media (max-width: 991.98px)
   #navbar-main .navbar-collapse
     position: fixed
     top: $navbar-height
-    background: #f6f9fc
     left: 0
     right: 0
     z-index: 1050
-    padding: .75rem 1rem
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.12)
+    padding: 0.5rem 20px 0.75rem 20px
 
-  #navbar-main .navbar-nav .nav-link
-    padding: .5rem 0
+    @include themify($themes)
+      background: themed('background')
+      border-bottom: 1px solid themed('divider')
+      box-shadow: 0 10px 24px -12px themed('card-shadow')
 
-/* Optional: nicer tap targets */
-#navbar-main .nav-link
-  line-height: 1.25
-  display: block
+  #navbar-main .navbar-nav
+    align-items: stretch
+    gap: 0
+
+  #navbar-main .nav-link
+    padding: 0.6rem 0
+    font-size: 0.9375rem
+
+    &::after
+      display: none
+
+  nav .navbar-nav li.active .nav-link
+    @include themify($themes)
+      color: themed('accent-color')
+
+@media (max-width: 480px)
+  .navbar-inner
+    padding: 0 16px

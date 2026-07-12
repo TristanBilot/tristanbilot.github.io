@@ -1,0 +1,79 @@
+@import 'theme.scss'
+
+.collaboration-card
+  padding: 1.6rem 1.75rem
+  font-size: 0.9688rem
+  line-height: 1.7
+
+  @include themify($themes)
+    color: themed('text-body')
+
+  // The card spans the full column; its copy still reads at prose measure.
+  p
+    max-width: 62ch
+    margin: 0 0 1rem 0
+
+  b
+    font-weight: 600
+    @include themify($themes)
+      color: themed('text-color')
+
+.collaboration-card__topics
+  margin: 0 0 1.5rem 0
+  padding: 0
+  list-style: none
+
+  li
+    position: relative
+    padding-left: 1.25rem
+    font-size: 0.9375rem
+    line-height: 1.55
+
+    & + li
+      margin-top: 0.4rem
+
+    @include themify($themes)
+      color: themed('text-body')
+
+    // Custom marker so the accent bullet is themed and consistently placed.
+    &::before
+      content: ''
+      position: absolute
+      left: 0.15rem
+      top: 0.62em
+      width: 5px
+      height: 5px
+      border-radius: 50%
+
+      @include themify($themes)
+        background: themed('accent-color')
+
+.collaboration-card__cta
+  display: inline-flex
+  align-items: center
+  gap: 9px
+  height: 38px
+  padding: 0 18px
+  border-radius: $radius-pill
+  font-size: 0.9375rem
+  font-weight: 500
+  transition: transform 0.15s $ease, background 0.15s $ease, box-shadow 0.15s $ease
+
+  @include themify($themes)
+    color: themed('accent-contrast')
+    background: themed('accent-color')
+
+  &:hover
+    transform: translateY(-1px)
+
+    @include themify($themes)
+      color: themed('accent-contrast')
+      background: themed('accent-strong')
+      box-shadow: 0 8px 18px -8px themed('accent-color')
+
+  i
+    font-size: 0.875rem
+
+@media (max-width: 800px)
+  .collaboration-card
+    padding: 1.25rem

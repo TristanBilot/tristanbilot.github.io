@@ -1,46 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Section from './Section';
 import '../Styles/articles.sass';
 
-class Articles extends Component {
+const MEDIUM_URL = 'https://tristanbilot.medium.com';
 
-  render() {
-    return (
-      <div id="articles" className="header">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-sm-3 col-0"></div>
-            <div className="col-sm-6 col-12">
-              <div className="small-vertical-space"></div>
-              <div className="block">
-                <h1 className="title animate-letters-accent animatable fadeInUp">Medium articles</h1>
-                <blockquote className="blockquote">
-                  <p className='span-title-comment'>I write <span className='accent-color'> Medium articles</span> on various engineering/programming topics, to <span className='accent-color'>help the community</span> on issues I encountered over the last years.</p>
-                </blockquote>
-                <div className="very-small-vertical-space"></div>
+/*
+ * The list is filled at runtime by public/scripts/fetch_articles.js, which
+ * pulls the Medium RSS feed and writes cards into `.blog__slider`.
+ */
+const Articles = () => (
+  <Section
+    id="articles"
+    title="Medium articles"
+    intro="I write on various engineering and programming topics, to help the community with issues I ran into over the last years."
+  >
+    <section id="blog" className="animatable fadeInUp">
+      <ul className="blog__slider" />
+      <ul className="blog__counter" />
+    </section>
 
-                <div className="row animatable fadeInUp">
-                  <div className="col-md-12">
-                    <section id="blog" className="accent-box">
-                      <ul className="blog__slider">
-                        {/* posts */}
-                      </ul>
-                      <ul className="blog__counter">
-                        {/* counters */}
-                      </ul>
-                    </section>
-                    <div className="more-articles animatable fadeInUp">
-                      <a className='accent-underline' href="https://tristanbilot.medium.com" alt="link to my medium page" target="_blank" rel="noopener noreferrer"> All articles...</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-3 col-0"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+    <div className="more-articles animatable fadeInUp">
+      <a className="accent-underline" href={MEDIUM_URL} target="_blank" rel="noopener noreferrer">
+        All articles on Medium →
+      </a>
+    </div>
+  </Section>
+);
 
 export default Articles;

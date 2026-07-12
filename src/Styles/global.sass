@@ -1,58 +1,206 @@
-@import 'theme.scss';
-    
-.title
-    font-size: 2.6em
-    font-weight: 700
-    display: flex
-    justify-content: flex-start
-    position: relative
+@import 'theme.scss'
+
+// ---------------------------------------------------------------- base ---
+
+html
+  scroll-behavior: smooth
+
+@media (prefers-reduced-motion: reduce)
+  html
+    scroll-behavior: auto
+
+  *, *::before, *::after
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important
+
+body
+  font-family: $font-sans
+  font-size: 17px
+  line-height: 1.65
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  transition: background-color $switch-transition-delay ease, color $switch-transition-delay ease
+
+  @include themify($themes)
+    background: themed('background')
+    color: themed('text-color')
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-serif
+  font-weight: 600
+  letter-spacing: -0.01em
+  line-height: 1.25
+
+a
+  color: inherit
+  text-decoration: none
+  @include focus-ring
+
+button
+  font: inherit
+  @include focus-ring
+
+ul
+  list-style: none
+
+::selection
+  @include themify($themes)
+    background: themed('accent-soft')
+
+// Skip link: visible only once focused via keyboard.
+.skip-link
+  position: absolute
+  left: 12px
+  top: -60px
+  z-index: 2000
+  padding: 10px 16px
+  border-radius: $radius-sm
+  font-size: 14px
+  transition: top 0.15s $ease
+
+  @include themify($themes)
+    background: themed('surface')
+    color: themed('text-color')
+    border: 1px solid themed('border')
+
+  &:focus
+    top: 12px
+
+// -------------------------------------------------------------- layout ---
+
+// Every section is a full-bleed band; `.section__inner` sets the reading
+// measure. `.header` is kept as a hook for the scroll-spy and themed band
+// background that the rest of the site already relies on.
+.header
+  @include themify($themes)
+    background: themed('background')
+
+.section
+  padding: $section-gap 0
+  scroll-margin-top: $navbar-height + 16px
+
+.section__inner
+  max-width: $page
+  margin: 0 auto
+  padding: 0 $gutter
+
+.section__head
+  max-width: $measure
+  margin-bottom: 2rem
+
+.section__title, .title
+  font-family: $font-serif
+  font-size: 1.875rem
+  font-weight: 600
+  letter-spacing: -0.015em
+  margin: 0
+
+  @include themify($themes)
+    color: themed('text-color')
+
+.section__intro, .span-title-comment
+  margin: 0.6rem 0 0 0
+  font-size: 1rem
+
+  @include themify($themes)
+    color: themed('text-color-secondary')
+
+  a
+    text-decoration: underline
+    text-underline-offset: 2px
+    transition: color 0.15s $ease
+
+    @include themify($themes)
+      color: themed('accent-color')
+      text-decoration-color: themed('accent-soft')
+
+    &:hover
+      @include themify($themes)
+        color: themed('accent-strong')
+        text-decoration-color: themed('accent-color')
+
+// Prose blocks: comfortable rhythm, restrained link styling.
+// No font-size here: `1rem` would silently drop below the body's 17px.
+.prose
+  max-width: $measure
+  line-height: 1.72
+
+  @include themify($themes)
+    color: themed('text-body')
+
+  p
+    margin: 0 0 1.1rem 0
+
+    &:last-child
+      margin-bottom: 0
+
+  strong, b
+    font-weight: 600
     @include themify($themes)
       color: themed('text-color')
 
-.header
-    width: 100vw
+  a
+    text-decoration: underline
+    text-underline-offset: 2px
+    transition: color 0.15s $ease
+
     @include themify($themes)
-      background: themed('background')
+      color: themed('accent-color')
+      text-decoration-color: themed('accent-soft')
+
+    &:hover
+      @include themify($themes)
+        color: themed('accent-strong')
+        text-decoration-color: themed('accent-color')
+
+// ---------------------------------------------------------------- bits ---
 
 .accent-color
   @include themify($themes)
-      color: themed('accent-color')
-
-.vertical-space
-    height: 14vh
-
-.small-vertical-space
-  height: 7vh
-
-.very-small-vertical-space
-  height: 3vh
-
-.span-title-comment
-  @include themify($themes)
-    color: themed('text-color')
-  margin-top: 15px
+    color: themed('accent-color')
 
 .accent-underline
   text-decoration: underline
-  @include themify($themes)
-    color: themed('accent-color') 
-    text-decoration-color: themed('accent-color') 
-
-.accent-box
-  border-radius: 10px
-  background: white
-  padding: 6px
-  padding-top: 15px
-  box-shadow: 0 2px 10px rgba(50, 50, 93, 0.1)
-
-  // Need to be substituted in the theme
-  *
-    text-color: #2A2730
+  text-underline-offset: 2px
 
   @include themify($themes)
-    border-top: 4px solid themed('accent-color')
+    color: themed('accent-color')
+    text-decoration-color: themed('accent-color')
 
+// The shared card surface. Quiet border, no accent stripe: on a page with a
+// dozen cards a coloured top edge on each one reads as noise.
+.accent-box, .card-surface
+  border-radius: $radius
+  transition: border-color 0.18s $ease, box-shadow 0.18s $ease, transform 0.18s $ease
+
+  @include themify($themes)
+    background: themed('card-background')
+    color: themed('text-color')
+    border: 1px solid themed('card-border')
+    box-shadow: 0 1px 2px themed('card-shadow')
+
+.vertical-space
+  height: 4rem
+
+.small-vertical-space
+  height: 2.5rem
+
+.very-small-vertical-space
+  height: 1.25rem
+
+.vertical-space-only-mobile
+  height: 0
 
 @media (max-width: 800px)
-  .title
-    font-size: 2em
+  body
+    font-size: 16px
+
+  .section
+    padding: 3.5rem 0
+
+  .section__title, .title
+    font-size: 1.6rem
+
+  .section__inner
+    padding: 0 20px

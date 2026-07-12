@@ -1,0 +1,82 @@
+@import 'theme.scss'
+
+.talks-list
+  margin: 0
+  padding: 0
+
+.talk-item
+  display: grid
+  grid-template-columns: 1fr auto
+  align-items: baseline
+  gap: 0.5rem 1.5rem
+  padding: 0.3rem 0
+
+  & + .talk-item
+    @include themify($themes)
+      border-top: 1px solid themed('divider')
+
+.talk-item__main
+  min-width: 0
+
+.talk-item__host
+  font-weight: 600
+  font-size: 0.9688rem
+
+  @include themify($themes)
+    color: themed('text-color')
+
+  &::after
+    content: ' — '
+    font-weight: 400
+    white-space: pre
+
+    @include themify($themes)
+      color: themed('text-color-muted')
+
+.talk-item__title
+  font-size: 0.9688rem
+
+  @include themify($themes)
+    color: themed('text-body')
+
+.talk-item__meta
+  display: flex
+  align-items: baseline
+  gap: 0.75rem
+  justify-self: end
+  white-space: nowrap
+
+.talk-item__place
+  font-size: 0.8125rem
+  font-variant-numeric: tabular-nums
+
+  @include themify($themes)
+    color: themed('text-color-muted')
+
+.talk-item__links
+  display: inline-flex
+  gap: 0.6rem
+
+  a
+    font-size: 0.8125rem
+    font-weight: 500
+    text-decoration: underline
+    text-underline-offset: 2px
+    transition: color 0.15s $ease
+
+    @include themify($themes)
+      color: themed('accent-color')
+      text-decoration-color: themed('accent-soft')
+
+    &:hover
+      @include themify($themes)
+        color: themed('accent-strong')
+        text-decoration-color: themed('accent-color')
+
+@media (max-width: 640px)
+  .talk-item
+    grid-template-columns: 1fr
+    gap: 0.35rem
+
+  .talk-item__meta
+    justify-self: start

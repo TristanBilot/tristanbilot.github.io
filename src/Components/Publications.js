@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Section from './Section';
 import phishgnn from '../resources/publications/phishgnn_figure.png';
 import intrusion_survey from '../resources/publications/intrusion_survey_figure.png';
 import malware_survey from '../resources/publications/malware_survey_figure.png';
@@ -52,6 +53,9 @@ const PUBLICATIONS = [
         label: 'Paper',
       },
       { href: 'https://github.com/ubc-provenance/PIDSMaker', icon: 'fa-brands fa-github', label: 'Code' },
+      { href: 'https://tristanbilot.github.io/public_content/poster_velox.pdf', icon: 'fa-solid fa-image', label: 'Poster' },
+      { href: 'https://www.usenix.org/system/files/sec25_slides_bilot.pdf', icon: 'fa-solid fa-file-pdf', label: 'Slides' },
+      { href: 'https://www.youtube.com/watch?v=Or_iAucWqT4', icon: 'fa-brands fa-youtube', label: 'Video' },
     ],
   },
   {
@@ -64,7 +68,7 @@ const PUBLICATIONS = [
       { name: 'Nour El Madhoun' },
       { name: 'Khaldoun Al Agha' },
       { name: 'Anis Zouaoui' },
-      { name: 'Shahrear Iqba' },
+      { name: 'Shahrear Iqbal' },
       { name: 'Xueyuan Han' },
       { name: 'Thomas Pasquier' },
     ],
@@ -77,6 +81,8 @@ const PUBLICATIONS = [
         label: 'Paper',
       },
       { href: 'https://github.com/ubc-provenance/orthrus', icon: 'fa-brands fa-github', label: 'Code' },
+      { href: 'https://www.usenix.org/system/files/sec25_slides_jiang-baoxiang.pdf', icon: 'fa-solid fa-file-pdf', label: 'Slides' },
+      { href: 'https://www.youtube.com/watch?v=_FpCefZeObw', icon: 'fa-brands fa-youtube', label: 'Video' },
     ],
   },
   {
@@ -125,7 +131,10 @@ const PUBLICATIONS = [
     authors: [{ name: ME }, { name: 'Nour El Madhoun' }, { name: 'Khaldoun Al Agha' }, { name: 'Anis Zouaoui' }],
     image: csnet,
     selected: false,
-    links: [{ href: 'https://hal.science/hal-04186579/document', icon: 'fa-solid fa-scroll', label: 'Paper' }],
+    links: [
+      { href: 'https://hal.science/hal-04186579/document', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://tristanbilot.github.io/public_content/poster_montreal.pdf', icon: 'fa-solid fa-image', label: 'Poster' },
+    ],
   },
   {
     id: 'phishgnn',
@@ -145,6 +154,28 @@ const PUBLICATIONS = [
     ],
   },
 ];
+
+// Inline SVG rather than a Font Awesome <i>: the Font Awesome JS bundle swaps
+// every <i> for an <svg> behind React's back, so re-rendering an <i> whose
+// class changes makes React remove a node that is no longer in the DOM and
+// crashes the whole tree. The chevron flips with CSS instead.
+const Chevron = ({ up }) => (
+  <svg
+    className={`publications-toggle__chevron${up ? ' publications-toggle__chevron--up' : ''}`}
+    viewBox="0 0 16 16"
+    width="12"
+    height="12"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <polyline points="3,6 8,11 13,6" />
+  </svg>
+);
 
 const AuthorList = ({ authors }) => {
   const hasEqualContrib = authors.some((a) => a.equal);
@@ -168,26 +199,36 @@ const AuthorList = ({ authors }) => {
 };
 
 const PublicationCard = ({ publication }) => (
-  <article className="publication-card animatable fadeInUp accent-box d-flex">
-    <div className="text-section">
-      {publication.award && (
-        <p className="publication-card__award">
-          <i className="fa-solid fa-award" /> <b>{publication.award}</b>
-        </p>
-      )}
-      <h6 className="publication-card__venue">{publication.venue}</h6>
+  <article className="publication-card card-surface animatable fadeInUp">
+    <div className="publication-card__body">
+      <div className="publication-card__meta">
+        <span className="publication-card__venue">{publication.venue}</span>
+        {publication.award && (
+          <span className="publication-card__award">
+            <i className="fa-solid fa-award" aria-hidden="true" /> {publication.award}
+          </span>
+        )}
+      </div>
+
       <h3 className="card-title">{publication.title}</h3>
       <AuthorList authors={publication.authors} />
+
       <div className="publication-card__links">
         {publication.links.map((link) => (
           <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">
-            <i className={link.icon} /> {link.label}
+            <i className={link.icon} aria-hidden="true" /> {link.label}
           </a>
         ))}
       </div>
     </div>
-    <div className="image-section d-flex align-items-center justify-content-center">
-      <img className="publication-card__image" src={publication.image} alt={`Figure from ${publication.title}`} />
+
+    <div className="publication-card__figure">
+      <img
+        className="publication-card__image"
+        src={publication.image}
+        alt={`Figure from ${publication.title}`}
+        loading="lazy"
+      />
     </div>
   </article>
 );
@@ -195,62 +236,36 @@ const PublicationCard = ({ publication }) => (
 const Publications = () => {
   const [showAll, setShowAll] = useState(false);
 
-  const selected = PUBLICATIONS.filter((p) => p.selected);
   const rest = PUBLICATIONS.filter((p) => !p.selected);
-  const visible = showAll ? PUBLICATIONS : selected;
+  const visible = showAll ? PUBLICATIONS : PUBLICATIONS.filter((p) => p.selected);
+
+  const intro = (
+    <>
+      Publications related to my research work. A full list is also on{' '}
+      <a href={SCHOLAR_URL} target="_blank" rel="noopener noreferrer">
+        Google Scholar
+      </a>
+      .
+    </>
+  );
 
   return (
-    <div id="publications" className="header">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="small-vertical-space"></div>
-          <div className="col-sm-3 col-0"></div>
-          <div className="col-sm-6 col-12">
-            <div className="block">
-              <div className="vertical-space-only-mobile"></div>
-              <h1 className="title fadeInUp">Publications</h1>
-              <blockquote className="blockquote">
-                <p className="span-title-comment">
-                  Publications related to my <span className="accent-color">research work</span>. A full list is also on{' '}
-                  <a className="accent-color" href={SCHOLAR_URL} target="_blank" rel="noopener noreferrer">
-                    Google Scholar
-                  </a>
-                  .
-                </p>
-              </blockquote>
-              <div className="very-small-vertical-space"></div>
-              <div className="row animatable fadeInUp">
-                <div className="col-md-12">
-                  {visible.map((publication) => (
-                    <React.Fragment key={publication.id}>
-                      <PublicationCard publication={publication} />
-                      <div className="very-small-vertical-space"></div>
-                    </React.Fragment>
-                  ))}
-
-                  {rest.length > 0 && (
-                    <div className="publications-toggle">
-                      <button type="button" onClick={() => setShowAll((v) => !v)} aria-expanded={showAll}>
-                        {showAll ? (
-                          <>
-                            Show fewer publications <i className="fa-solid fa-chevron-up" />
-                          </>
-                        ) : (
-                          <>
-                            Show all {PUBLICATIONS.length} publications <i className="fa-solid fa-chevron-down" />
-                          </>
-                        )}
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3 col-0"></div>
-        </div>
+    <Section id="publications" title="Publications" intro={intro}>
+      <div className="publication-list">
+        {visible.map((publication) => (
+          <PublicationCard key={publication.id} publication={publication} />
+        ))}
       </div>
-    </div>
+
+      {rest.length > 0 && (
+        <div className="publications-toggle">
+          <button type="button" onClick={() => setShowAll((v) => !v)} aria-expanded={showAll}>
+            <span>{showAll ? 'Show fewer publications' : `Show all ${PUBLICATIONS.length} publications`}</span>
+            <Chevron up={showAll} />
+          </button>
+        </div>
+      )}
+    </Section>
   );
 };
 
