@@ -9,8 +9,9 @@
     <meta name="author" content="Tristan Bilot" />
 
     <!--
-      Applies the saved (or system) theme before the first paint. Inline and
-      synchronous on purpose: deferring it shows a flash of the wrong theme.
+      Applies the theme before the first paint. Inline and synchronous on
+      purpose: deferring it shows a flash of the wrong theme. Defaults to light
+      unless the visitor has explicitly chosen a theme before.
     -->
     <script>
       (function () {
@@ -19,7 +20,7 @@
           theme = localStorage.getItem('theme');
         } catch (e) {}
         if (theme !== 'light' && theme !== 'dark') {
-          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          theme = 'light';
         }
         document.documentElement.classList.add('theme-' + theme);
         document.documentElement.style.colorScheme = theme;
