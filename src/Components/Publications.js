@@ -26,7 +26,8 @@ const PUBLICATIONS = [
     image: pidsmaker,
     selected: true,
     links: [
-      { href: 'https://arxiv.org/pdf/2601.22983', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://dl.acm.org/doi/abs/10.1145/3770855.3817514', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://tristanbilot.github.io/public_content/poster_pidsmaker.pdf', icon: 'fa-solid fa-image', label: 'Poster' },
       { href: 'https://github.com/ubc-provenance/PIDSMaker', icon: 'fa-brands fa-github', label: 'Code' },
     ],
   },
