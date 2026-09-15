@@ -4,27 +4,17 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/logo192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf9" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17161a" />
+    <meta name="theme-color" content="#fbfaf9" />
     <meta name="author" content="Tristan Bilot" />
 
     <!--
       Applies the theme before the first paint. Inline and synchronous on
-      purpose: deferring it shows a flash of the wrong theme. Defaults to light
-      unless the visitor has explicitly chosen a theme before.
+      purpose: deferring it shows a flash of the wrong theme. Every page load
+      starts in light mode; the toggle only lasts for the current page.
     -->
     <script>
-      (function () {
-        var theme;
-        try {
-          theme = localStorage.getItem('theme');
-        } catch (e) {}
-        if (theme !== 'light' && theme !== 'dark') {
-          theme = 'light';
-        }
-        document.documentElement.classList.add('theme-' + theme);
-        document.documentElement.style.colorScheme = theme;
-      })();
+      document.documentElement.classList.add('theme-light');
+      document.documentElement.style.colorScheme = 'light';
     </script>
     <meta
       name="description"

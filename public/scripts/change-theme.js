@@ -2,14 +2,13 @@
  * Theme switching.
  *
  * The initial theme is applied by an inline script in index.html so the page
- * never paints in the wrong one. This file only handles the toggle.
+ * never paints in the wrong one. This file only handles the toggle. The choice
+ * is deliberately not persisted: every page load starts in light mode.
  *
  * Clicks are delegated off the document because the toggle button lives inside
  * the React tree, which has not mounted when this script runs.
  */
 (function () {
-  var STORAGE_KEY = 'theme';
-
   function current() {
     return document.documentElement.classList.contains('theme-dark') ? 'dark' : 'light';
   }
@@ -25,13 +24,6 @@
     var button = event.target.closest && event.target.closest('[data-theme-toggle]');
     if (!button) return;
 
-    var next = current() === 'dark' ? 'light' : 'dark';
-    apply(next);
-
-    try {
-      localStorage.setItem(STORAGE_KEY, next);
-    } catch (e) {
-      // Private browsing: the theme still switches, it just won't be remembered.
-    }
+    apply(current() === 'dark' ? 'light' : 'dark');
   });
 })();
