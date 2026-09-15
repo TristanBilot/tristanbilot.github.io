@@ -11,6 +11,16 @@ const A = ({ href, children }) => (
 // `date` is the ISO value for <time>; `label` is what the reader sees.
 const NEWS = [
   {
+    date: '2026-09-14',
+    label: 'Sep 2026',
+    emoji: '🎓',
+    body: (
+      <>
+        Joined the University of Oxford as visiting scholar
+      </>
+    ),
+  },
+  {
     date: '2026-02-23',
     label: 'Jul 2026',
     emoji: '🏆',

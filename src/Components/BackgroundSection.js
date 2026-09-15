@@ -4,6 +4,14 @@ import '../Styles/background-section.sass';
 
 const TIMELINE = [
   {
+    role: 'Visiting Scholar',
+    org: 'University of Oxford',
+    year: '2026',
+    location: 'Oxford, UK',
+    logo: process.env.PUBLIC_URL + '/courses/phishgnn/img/oxford.png',
+    url: 'https://www.cs.ubc.ca/',
+  },
+  {
     role: 'Postdoctoral Fellow',
     org: 'University of British Columbia',
     year: '2026',

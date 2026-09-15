@@ -1,55 +1,68 @@
 @import 'theme.scss'
 
 $logo-size: 44px
+$dot-size: 9px
+$rail-gap: 1.25rem
+$rail-x: calc(#{$dot-size} / 2)
+$item-gap: 1.5rem
 
 .timeline
-  position: relative
+  display: flex
+  flex-direction: column
+  gap: $item-gap
 
-  // The rail runs through the centre of the logos, stopping at the first and
-  // last one rather than overshooting the list.
+.timeline-item
+  display: flex
+  align-items: center
+  position: relative
+  padding-left: calc(#{$dot-size} + #{$rail-gap})
+
+  // Dot on the rail, centred on the row.
   &::before
     content: ''
     position: absolute
-    left: calc(#{$logo-size} / 2 - 1px)
-    top: $logo-size
-    bottom: $logo-size
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: $dot-size
+    height: $dot-size
+    border-radius: 50%
+    z-index: 1
+
+    @include themify($themes)
+      background: themed('background')
+      box-shadow: inset 0 0 0 2px themed('accent-color')
+
+  // Rail segment from this dot down to the next one.
+  &::after
+    content: ''
+    position: absolute
+    left: calc(#{$rail-x} - 0.5px)
+    top: 50%
+    bottom: -$item-gap
     width: 1px
 
     @include themify($themes)
       background: themed('border')
 
-.timeline-item
-  display: flex
-  align-items: flex-start
-  position: relative
-  padding: 0.55rem 0
-
-  & + .timeline-item
-    margin-top: 0.4rem
+  &:last-child::after
+    display: none
 
 .timeline-logo
   width: $logo-size
   height: $logo-size
   min-width: $logo-size
-  border-radius: 50%
   display: flex
   align-items: center
   justify-content: center
-  background: #fff
-  overflow: hidden
-  z-index: 1
-
-  @include themify($themes)
-    box-shadow: 0 0 0 1px themed('border')
 
   img
-    width: 26px
-    height: 26px
+    width: $logo-size
+    height: $logo-size
     object-fit: contain
 
 .timeline-content
   margin-left: 1.125rem
-  padding-top: 0.1rem
 
 .timeline-role
   font-size: 1rem
@@ -81,6 +94,9 @@ $logo-size: 44px
     color: themed('text-color-muted')
 
 @media (max-width: 800px)
+  .timeline-item
+    padding-left: calc(#{$dot-size} + 0.9rem)
+
   .timeline-content
     margin-left: 0.9rem
 

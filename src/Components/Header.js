@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/header.sass';
-import me from '../resources/me4.jpeg';
+import me from '../resources/me5.jpg';
 
 const ICON_PROPS = {
   viewBox: '0 0 24 24',
