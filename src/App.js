@@ -21,17 +21,14 @@ import Talks from './Components/Talks'
 import Courses from './Components/Courses'
 import Course from './Components/courses/Course'
 
+// BrowserRouter gives clean URLs (no "/#/"). GitHub Pages is a static host,
+// so deep links are served by public/404.html, which bounces back to
+// index.html with the requested path preserved.
 import {
   Switch,
   Route,
-  HashRouter as Router
+  BrowserRouter as Router
 } from "react-router-dom";
-
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-// } from "react-router-dom";
 
 import './App.css';
 import './Styles/global.sass';
@@ -43,27 +40,27 @@ function CourseRoutes() {
   const courses = [
     {
       "url": "/prerequisites",
-      "course_path": "courses/prerequisites/Prerequisites.md",
+      "course_path": "/courses/prerequisites/Prerequisites.md",
       "name": "Prerequisites",
     },
     {
       "url": "/chain-rule",
-      "course_path": "courses/chain-rule/ChainRule.md",
+      "course_path": "/courses/chain-rule/ChainRule.md",
       "name": "Chain rule and computation graphs",
     },
     {
       "url": "/autodiff",
-      "course_path": "courses/autodiff/Autodiff.md",
+      "course_path": "/courses/autodiff/Autodiff.md",
       "name": "Automatic differentiation engine from scratch",
     },
     {
       "url": "/optimization",
-      "course_path": "courses/optimization/Optimization.md",
+      "course_path": "/courses/optimization/Optimization.md",
       "name": "Optimization and training",
     },
     {
       "url": "/xor-sine",
-      "course_path": "courses/xor-sine/XorSine.md",
+      "course_path": "/courses/xor-sine/XorSine.md",
       "name": "XOR and sine problems",
     },
   ]
@@ -110,7 +107,7 @@ function App() {
           <Route path="/phishGNN">
             <NavBar />
             <Course 
-              course_path="courses/phishgnn/PhishGNN.md"
+              course_path="/courses/phishgnn/PhishGNN.md"
             />
           </Route>
 

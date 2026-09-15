@@ -55,15 +55,9 @@ const Course = (props) => {
         btns.push(
           <div className="float-start" key="prev">
             <i className="fas fa-chevron-left"></i>
-            <a
-              href={`#${props.prev_course["url"]}`}   // note the '#' for HashRouter
-              className="ms-1"
-              onClick={() => {
-                // force a full reload after navigation
-                // small timeout ensures the hash updates first
-                setTimeout(() => window.location.reload(), 0)
-              }}
-            >
+            {/* Plain anchors on purpose: a full page load re-runs the
+                course scripts, which an in-app navigation would not. */}
+            <a href={props.prev_course["url"]} className="ms-1">
               {props.prev_course["name"]}
             </a>
           </div>
@@ -73,12 +67,7 @@ const Course = (props) => {
       if (props.next_course["course_path"] !== "") {
         btns.push(
           <div className="float-end" key="next">
-            <a
-              href={`#${props.next_course["url"]}`}   // again, hash URL
-              onClick={() => {
-                setTimeout(() => window.location.reload(), 0)
-              }}
-            >
+            <a href={props.next_course["url"]}>
               {props.next_course["name"]}
             </a>
             <i className="fas fa-chevron-right ms-1"></i>
