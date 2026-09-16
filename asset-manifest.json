@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.0faa5b00.chunk.css",
-    "main.js": "/static/js/main.f689266b.chunk.js",
-    "main.js.map": "/static/js/main.f689266b.chunk.js.map",
+    "main.js": "/static/js/main.c4a4fe98.chunk.js",
+    "main.js.map": "/static/js/main.c4a4fe98.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bb8275f0.js",
     "runtime-main.js.map": "/static/js/runtime-main.bb8275f0.js.map",
     "static/css/2.9c539863.chunk.css": "/static/css/2.9c539863.chunk.css",
@@ -23,6 +23,7 @@
     "static/media/intrusion_survey_figure.5d8df459.png": "/static/media/intrusion_survey_figure.5d8df459.png",
     "static/media/kernel.65a3a3df.png": "/static/media/kernel.65a3a3df.png",
     "static/media/knapsack.88c58e5b.png": "/static/media/knapsack.88c58e5b.png",
+    "static/media/lares.39b19094.jpg": "/static/media/lares.39b19094.jpg",
     "static/media/malware_survey_figure.a98e75c9.png": "/static/media/malware_survey_figure.a98e75c9.png",
     "static/media/me5.94045210.jpg": "/static/media/me5.94045210.jpg",
     "static/media/nn.dca8b20b.svg": "/static/media/nn.dca8b20b.svg",
@@ -38,6 +39,6 @@
     "static/css/2.9c539863.chunk.css",
     "static/js/2.f6d15683.chunk.js",
     "static/css/main.0faa5b00.chunk.css",
-    "static/js/main.f689266b.chunk.js"
+    "static/js/main.c4a4fe98.chunk.js"
   ]
 }
