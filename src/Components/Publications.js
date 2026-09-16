@@ -8,6 +8,7 @@ import feae from '../resources/publications/feae.png';
 import orthrus from '../resources/publications/orthrus.png';
 import velox from '../resources/publications/velox.png';
 import pidsmaker from '../resources/publications/pidsmaker.png';
+import lares from '../resources/publications/lares.jpg';
 import '../Styles/publications.sass';
 
 const SCHOLAR_URL = 'https://scholar.google.fr/citations?user=ijVNAGYAAAAJ&hl=en&oi=ao';
@@ -18,6 +19,24 @@ const ME = 'Tristan Bilot';
 // "show all publications" toggle. Authors marked `equal` render a shared
 // joint-first-author asterisk.
 const PUBLICATIONS = [
+  {
+    id: 'lards',
+    venue: 'ACSAC 2026',
+    title: 'LARES: Host-centered Lateral Movement Detection via Inductive Graph Reasoning',
+    authors: [
+      { name: ME },
+      { name: 'Nour El Madhoun' },
+      { name: 'Anis Zouaoui' },
+      { name: 'Khaldoun Al Agha' },
+      { name: 'Thomas Pasquier' },
+  ],
+    image: lares,
+    selected: true,
+    links: [
+      { href: 'https://tfjmp.org/publications/2026-acsac.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://github.com/TristanBilot/lares', icon: 'fa-brands fa-github', label: 'Code' },
+    ],
+  },
   {
     id: 'pidsmaker',
     venue: 'KDD 2026 (Datasets & Benchmarks)',
@@ -33,7 +52,7 @@ const PUBLICATIONS = [
   },
   {
     id: 'velox',
-    venue: "USENIX Security Symposium 2025 (USENIX Sec'25)",
+    venue: "USENIX Security 2025",
     title:
       'Sometimes Simpler is Better: A Comprehensive Analysis of State-of-the-Art Provenance-Based Intrusion Detection Systems',
     authors: [
@@ -61,7 +80,7 @@ const PUBLICATIONS = [
   },
   {
     id: 'orthrus',
-    venue: "USENIX Security Symposium 2025 (USENIX Sec'25)",
+    venue: "USENIX Security 2025",
     title: 'ORTHRUS: Achieving High Quality of Attribution in Provenance-based Intrusion Detection Systems',
     authors: [
       { name: 'Baoxiang Jiang', equal: true },
