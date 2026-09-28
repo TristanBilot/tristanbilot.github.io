@@ -9,6 +9,8 @@ import orthrus from '../resources/publications/orthrus.png';
 import velox from '../resources/publications/velox.png';
 import pidsmaker from '../resources/publications/pidsmaker.png';
 import lares from '../resources/publications/lares.jpg';
+import purple from '../resources/publications/purple.png';
+import spider from '../resources/publications/spider.png';
 import '../Styles/publications.sass';
 
 const SCHOLAR_URL = 'https://scholar.google.fr/citations?user=ijVNAGYAAAAJ&hl=en&oi=ao';
@@ -20,7 +22,41 @@ const ME = 'Tristan Bilot';
 // joint-first-author asterisk.
 const PUBLICATIONS = [
   {
-    id: 'lards',
+    id: 'spider',
+    venue: 'NeurIPS 2026',
+    title: 'Learning Transferable Representations from Operating System Entities via Provenance Graph Distillation',
+    authors: [
+      { name: ME },
+      { name: 'Xueyuan Han' },
+      { name: 'Thomas Pasquier' },
+  ],
+    image: spider,
+    selected: true,
+    links: [
+      // { href: 'https://tfjmp.org/publications/2026-acsac.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://github.com/ubc-provenance/PIDSMaker/tree/spider', icon: 'fa-brands fa-github', label: 'Code' },
+    ],
+  },
+  {
+    id: 'purple',
+    venue: 'NeurIPS 2026',
+    title: 'PurpleAudit: A Co-Evolutionary Auditing Framework for Task Hijacking in Multi-Agent Systems',
+    authors: [
+      { name:  ME},
+      { name: 'Zhilu Zhang' },
+      { name: 'Kay Liu' },
+      { name: 'Mikhail Kuznetsov' },
+      { name: 'Wei Ding' },
+  ],
+    image: purple,
+    selected: true,
+    links: [
+      // { href: 'https://tfjmp.org/publications/2026-acsac.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      // { href: 'https://github.com/TristanBilot/lares', icon: 'fa-brands fa-github', label: 'Code' },
+    ],
+  },
+  {
+    id: 'lares',
     venue: 'ACSAC 2026',
     title: 'LARES: Host-centered Lateral Movement Detection via Inductive Graph Reasoning',
     authors: [
