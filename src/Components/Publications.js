@@ -33,7 +33,7 @@ const PUBLICATIONS = [
     image: spider,
     selected: true,
     links: [
-      // { href: 'https://tfjmp.org/publications/2026-acsac.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://tfjmp.org/publications/2026-neurips.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
       { href: 'https://github.com/ubc-provenance/PIDSMaker/tree/spider', icon: 'fa-brands fa-github', label: 'Code' },
     ],
   },
@@ -51,8 +51,7 @@ const PUBLICATIONS = [
     image: purple,
     selected: true,
     links: [
-      // { href: 'https://tfjmp.org/publications/2026-acsac.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
-      // { href: 'https://github.com/TristanBilot/lares', icon: 'fa-brands fa-github', label: 'Code' },
+      { href: '/public_content/paper_purpleaudit.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
     ],
   },
   {
