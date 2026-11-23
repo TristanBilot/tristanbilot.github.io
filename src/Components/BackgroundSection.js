@@ -4,12 +4,20 @@ import '../Styles/background-section.sass';
 
 const TIMELINE = [
   {
+    role: 'Learning Expedition',
+    org: 'Massachusetts Institute of Technology (MIT)',
+    year: '2026',
+    location: 'Boston, USA',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/MIT_logo_2003-2023.svg',
+    url: 'https://www.mit.edu/',
+  },
+  {
     role: 'Visiting Scholar',
     org: 'University of Oxford',
     year: '2026',
     location: 'Oxford, UK',
     logo: process.env.PUBLIC_URL + '/courses/phishgnn/img/oxford.png',
-    url: 'https://www.cs.ubc.ca/',
+    url: 'https://www.cs.ox.ac.uk/',
   },
   {
     role: 'Postdoctoral Fellow',

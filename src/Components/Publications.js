@@ -33,7 +33,7 @@ const PUBLICATIONS = [
     image: spider,
     selected: true,
     links: [
-      { href: 'https://tfjmp.org/publications/2026-neurips.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://openreview.net/forum?id=WwcXnh7i6p&noteId=WwcXnh7i6p', icon: 'fa-solid fa-scroll', label: 'Paper' },
       { href: 'https://github.com/ubc-provenance/PIDSMaker/tree/spider', icon: 'fa-brands fa-github', label: 'Code' },
     ],
   },
@@ -51,7 +51,8 @@ const PUBLICATIONS = [
     image: purple,
     selected: true,
     links: [
-      { href: '/public_content/paper_purpleaudit.pdf', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://openreview.net/forum?id=jWQ6jNKfWI&noteId=jWQ6jNKfWI', icon: 'fa-solid fa-scroll', label: 'Paper' },
+      { href: 'https://github.com/amazon-science/PurpleAudit', icon: 'fa-brands fa-github', label: 'Code' },
     ],
   },
   {

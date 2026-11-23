@@ -11,12 +11,26 @@ const A = ({ href, children }) => (
 // `date` is the ISO value for <time>; `label` is what the reader sees.
 const NEWS = [
   {
+    date: '2026-11-04',
+    label: 'Nov 2026',
+    emoji: '🇺🇸',
+    body: (
+      <>
+        Visited <b>MIT</b> in Boston for a{' '}
+        <A href="https://www.linkedin.com/feed/update/urn:li:activity:7523632455120158720/">
+          learning expedition on entrepreneurship
+        </A>{' '}
+        as a <b>Start'up Pitch-iD</b> laureate.
+      </>
+    ),
+  },
+  {
     date: '2026-09-14',
     label: 'Sep 2026',
     emoji: '🎓',
     body: (
       <>
-        Joined the University of Oxford as visiting scholar
+        Joined the <A href="https://www.cs.ox.ac.uk/">University of Oxford</A> as visiting scholar
       </>
     ),
   },
