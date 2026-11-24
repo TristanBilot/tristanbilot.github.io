@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e2ff315.chunk.css",
-    "main.js": "/static/js/main.010b66e2.chunk.js",
-    "main.js.map": "/static/js/main.010b66e2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ccccd78a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ccccd78a.js.map",
+    "main.css": "/static/css/main.0bd255e4.chunk.css",
+    "main.js": "/static/js/main.9bfbcf73.chunk.js",
+    "main.js.map": "/static/js/main.9bfbcf73.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7d129277.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7d129277.js.map",
     "static/css/2.43e890e5.chunk.css": "/static/css/2.43e890e5.chunk.css",
-    "static/js/2.9161c219.chunk.js": "/static/js/2.9161c219.chunk.js",
-    "static/js/2.9161c219.chunk.js.map": "/static/js/2.9161c219.chunk.js.map",
-    "static/js/3.f30772b6.chunk.js": "/static/js/3.f30772b6.chunk.js",
-    "static/js/3.f30772b6.chunk.js.map": "/static/js/3.f30772b6.chunk.js.map",
+    "static/js/2.f5a6b7a9.chunk.js": "/static/js/2.f5a6b7a9.chunk.js",
+    "static/js/2.f5a6b7a9.chunk.js.map": "/static/js/2.f5a6b7a9.chunk.js.map",
+    "static/js/3.70ee8840.chunk.js": "/static/js/3.70ee8840.chunk.js",
+    "static/js/3.70ee8840.chunk.js.map": "/static/js/3.70ee8840.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.43e890e5.chunk.css.map": "/static/css/2.43e890e5.chunk.css.map",
-    "static/css/main.0e2ff315.chunk.css.map": "/static/css/main.0e2ff315.chunk.css.map",
-    "static/js/2.9161c219.chunk.js.LICENSE.txt": "/static/js/2.9161c219.chunk.js.LICENSE.txt",
+    "static/css/main.0bd255e4.chunk.css.map": "/static/css/main.0bd255e4.chunk.css.map",
+    "static/js/2.f5a6b7a9.chunk.js.LICENSE.txt": "/static/js/2.f5a6b7a9.chunk.js.LICENSE.txt",
     "static/media/katex.min.css": "/static/media/KaTeX_Typewriter-Regular.c5c02d76.ttf",
     "static/media/blockchain.921b90aa.png": "/static/media/blockchain.921b90aa.png",
     "static/media/bq.40b0aef3.svg": "/static/media/bq.40b0aef3.svg",
@@ -37,10 +37,10 @@
     "static/media/velox.a4125210.png": "/static/media/velox.a4125210.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ccccd78a.js",
+    "static/js/runtime-main.7d129277.js",
     "static/css/2.43e890e5.chunk.css",
-    "static/js/2.9161c219.chunk.js",
-    "static/css/main.0e2ff315.chunk.css",
-    "static/js/main.010b66e2.chunk.js"
+    "static/js/2.f5a6b7a9.chunk.js",
+    "static/css/main.0bd255e4.chunk.css",
+    "static/js/main.9bfbcf73.chunk.js"
   ]
 }
